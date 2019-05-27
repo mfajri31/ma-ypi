@@ -1,0 +1,45 @@
+.konten {
+	min-height: 200px;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.header-topbar {
+	background-color: #135238;
+}
+
+.nav-link {
+	color: white!important;
+}
+
+.active {
+	color: yellow!important;
+}
+
+.nav-link:hover {
+	color: yellow!important;
+}
+
+.dropdown-menu {
+	background-color: #28a745!important;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: #28a745!important;
+	color: yellow!important;
+}
+
+.bg-abu {
+	background-color: #eaeaea;
+}
+
+.fa.service {
+    font-size: 100px;
+    color: #28a745;
+}
