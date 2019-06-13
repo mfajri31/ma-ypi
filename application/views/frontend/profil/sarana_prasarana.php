@@ -1,7 +1,7 @@
 <div class="container konten my-3">
 	<div class="row">
 		<div class="col-md-8">
-			<h1>Sejarah</h1>
+			<h1>Sarana dan Prasarana</h1>
 			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat sit, sunt porro consequuntur, quis eveniet quidem nobis laboriosam soluta animi ipsum labore nihil eaque quam architecto optio nesciunt, incidunt ipsam quaerat neque! Amet aperiam, dolor soluta ipsa ullam cumque error odit natus inventore ea nulla maxime. Accusamus, nulla harum veritatis!</p>
 
 			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui illo placeat tempore ratione praesentium omnis ut, aspernatur, consequuntur, fugit dolorum sunt. Sequi sunt non natus, aperiam! Ipsum modi nihil accusantium explicabo ipsam, voluptatum, qui cum soluta, cupiditate eum doloribus aperiam vel ex! Explicabo dolorum numquam eum officia harum quos maxime rerum nulla earum fugit consectetur alias ex dignissimos magni placeat, perferendis a ipsum vitae est. Est ad magni adipisci illo, ex magnam. Ad iste eum architecto, aspernatur sit, corporis iusto.</p>
@@ -13,13 +13,7 @@
 
 		<!-- sidebar -->
 		<div class="col-md-4 mt-4">
-			<h3 class="text-center mb-4">Pengumuman Terbaru</h3>
-
-			<ul class="list-group list-group-flush">
-			  <li class="list-group-item"><a href="#">Libur Lebaran</a></li>
-			  <li class="list-group-item"><a href="#">Libur Semester</a></li>
-			  <p class="text-center mt-3"><a href="">Lihat Semua</a></p>
-			</ul>
+			<?php sidebar(); ?>
 		</div>
 		<!-- /sidebar -->
 

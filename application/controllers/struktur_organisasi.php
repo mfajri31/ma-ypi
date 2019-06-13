@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sejarah extends CI_Controller {
+class Struktur_organisasi extends CI_Controller {
 
 	public function __construct()
 	{
@@ -10,7 +10,7 @@ class Sejarah extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Sejarah';
-		$this->template->frontend('frontend/profil/sejarah', $data);
+		$data['title'] = 'Struktur Organisasi';
+		$this->template->frontend('frontend/profil/struktur_organisasi', $data);
 	}
 }

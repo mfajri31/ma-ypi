@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Visi_misi extends CI_Controller {
+class Tilawatil_quran extends CI_Controller {
 
 	public function __construct()
 	{
@@ -10,7 +10,7 @@ class Visi_misi extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Visi dan Misi';
-		$this->template->frontend('frontend/profil/visi_misi', $data);
+		$data['title'] = "Tilawatil Qur'an";
+		$this->template->frontend('frontend/ekstrakurikuler/tilawatil_quran', $data);
 	}
 }
