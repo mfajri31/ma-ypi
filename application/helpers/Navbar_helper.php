@@ -8,3 +8,12 @@ function active($param)
 		echo "active";
 	}
 }
+
+function active_menu($param)
+{
+	$ci = get_instance();
+
+	if( $ci->uri->segment(2) == $param ){
+		echo "active";
+	}
+}

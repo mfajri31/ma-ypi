@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,12 +12,12 @@
 
     <style>
 		img.gambar-slide {
-			max-height: 650px;
+			max-height: 700px;
 		}
 
 		@media screen and (max-width: 768px){
 			img.gambar-slide {
-				height: 200px;
+				height: 250px;
 			}
 		}
     </style>
