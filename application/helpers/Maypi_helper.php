@@ -1,5 +1,12 @@
 <?php 
 
+function sidebar()
+{
+	$ci = get_instance();
+
+	$ci->load->view('template_frontend/sidebar');
+}
+
 function active($param)
 {
 	$ci = get_instance();
