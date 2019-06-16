@@ -2,7 +2,6 @@
 	<h1>Manajemen User</h1>
 </section>
 
-
 <section class="content">
 	<div class="row">
 		<div class="col-lg-12">
@@ -16,16 +15,24 @@
 				<div class="box-body">
 					<form action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
+							<label>Nama</label>
+							<input type="text" name="nama" class="form-control" value="<?= set_value('nama'); ?>">
+							<?= form_error('nama'); ?>
+						</div>
+						<div class="form-group">
 							<label>Email</label>
-							<input type="text" name="email" class="form-control">
+							<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>">
+							<?= form_error('email'); ?>
 						</div>
 						<div class="form-group">
 							<label>Password</label>
-							<input type="password" name="password" class="form-control">
+							<input type="password" name="password" class="form-control" value="<?= set_value('password'); ?>">
+							<?= form_error('password'); ?>
 						</div>
 						<div class="form-group">
 							<label>Konfirmasi Password</label>
-							<input type="password" name="passconf" class="form-control">
+							<input type="password" name="passconf" class="form-control" value="<?= set_value('passconf'); ?>">
+							<?= form_error('passconf'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
 							<i class="fa fa-plus"></i> Tambah
