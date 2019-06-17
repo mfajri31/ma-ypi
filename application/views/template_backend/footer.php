@@ -1,5 +1,14 @@
+<!-- ./Content Wrapper -->
 </div>
-  <!-- /.content-wrapper -->
+
+<!-- Main Footer -->
+<footer class="main-footer text-center">
+  <strong>Copyright &copy; <?= date('Y'); ?> MAYPI.</strong>
+</footer>
+
+<!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 

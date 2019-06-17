@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2019 at 08:51 PM
+-- Generation Time: Jun 17, 2019 at 11:41 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -50,6 +50,13 @@ CREATE TABLE `tb_token` (
   `date_created` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tb_token`
+--
+
+INSERT INTO `tb_token` (`id`, `email`, `token`, `date_created`) VALUES
+(10, 'akuntigaku@gmail.com', 'nwe7JPyxhdbSQq5EOBWopIN3icRKtk2z', 1560778692);
+
 -- --------------------------------------------------------
 
 --
@@ -71,8 +78,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `nama`, `email`, `password`, `level`, `status`, `foto`) VALUES
-(1, 'Muhammad Fajri', 'mfajri429@gmail.com', '$2y$10$g2izlv0yvRX88pku8mctOeO8/ZrAOuOn5woVF2tuxMox3g1ZgnZOe', 'superadmin', 1, 'default.jpg'),
-(18, 'Andi', 'akuntigaku@gmail.com', '$2y$10$Qoqp67HmEwuinlcPg53b9u2kCBfOxGV18EZP79E4sWfe65gHt8TIy', 'admin', 1, 'default.jpg');
+(1, 'Muhammad Fajri', 'mfajri429@gmail.com', '$2y$10$xpXjk1kY85/Wj/eyfMvheO.CvhJVQep0Ih8R30F.C232gKaUUnPbm', 'superadmin', 1, 'fc1eeb98ceef2b545eb5de210b17accc.JPG'),
+(18, 'Andi', 'akuntigaku@gmail.com', '$2y$10$uCYG1Vp5W6c7HxMdjxPAe.SOKps.QW3BN88g5yzdCXbWXJzCHqxEm', 'admin', 1, 'default.jpg');
 
 --
 -- Indexes for dumped tables
@@ -110,7 +117,7 @@ ALTER TABLE `tb_berita`
 -- AUTO_INCREMENT for table `tb_token`
 --
 ALTER TABLE `tb_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tb_user`

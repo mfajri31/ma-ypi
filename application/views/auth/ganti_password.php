@@ -31,26 +31,23 @@
     <div class="login-box">
         <div class="login-box-body">
             <div class="login-logo">
-                <a href="" class="text-green"><b>MA</b>YPI</a>
+                <h3>Ganti Password</h3>
             </div>
-                    
-            <?= $this->session->flashdata('message'); ?>
 
-            <form action="<?= base_url('auth'); ?>" method="post" id="form-login">
+            <form action="<?= base_url('auth/ganti_password'); ?>" method="post" id="form-login">
                 <div class="form-group has-feedback">
-                    <input type="text" name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    <?= form_error('email'); ?>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Masukkan Password Baru" value="<?= set_value('password'); ?>">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     <?= form_error('password'); ?>
                 </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="passconf" class="form-control" placeholder="Masukkan Konfirmasi Password Baru" value="<?= set_value('passconf'); ?>">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    <?= form_error('passconf'); ?>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button type="submit" class="btn btn-success btn-block btn-flat">Login</button>
-                        <a href="<?= base_url('auth/lupa_password'); ?>" class="btn btn-block">Lupa Password</a>
+                        <button type="submit" class="btn btn-success btn-block btn-flat">Ganti Password</button>
                     </div>
                 </div>
             </form>

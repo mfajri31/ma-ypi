@@ -47,9 +47,11 @@
 			            	<td width="70"><img src="<?= base_url('assets/img/profil/'.$user['foto']); ?>" width="60"></td>
 			            	<td><?= $user['nama']; ?></td>
 			            	<td><?= $user['email']; ?></td>
-			            	<td width="80" align="center">
-			            		<a href="<?= base_url('administrator/user/hapus/'.$user['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
-			            	</td>
+			            	<?php if( $user['level'] == 'admin' ) : ?>
+				            	<td width="80" align="center">
+				            		<a href="<?= base_url('administrator/user/hapus/'.$user['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
+				            	</td>
+				            <?php endif; ?>
 			            </tr>
 			        <?php endforeach; ?>
 		            </tbody>

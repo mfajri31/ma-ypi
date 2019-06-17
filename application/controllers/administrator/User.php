@@ -71,7 +71,7 @@ class User extends CI_Controller {
 		$this->email->to($this->input->post('email'));
 
 		$this->email->subject('Verifikasi User');
-		$this->email->message('Klik link berikut ini untuk memverifikasi : <a href="' . base_url().'auth/verify?email=' . $this->input->post('email') . '&token=' . $token . '">Activate</a> <br> Pesan ini hanya valid 24 jam');
+		$this->email->message('Klik link berikut ini untuk memverifikasi : <a href="' . base_url().'auth/verify?email=' . $this->input->post('email') . '&token=' . $token . '">Aktivasi</a> <br> Pesan ini hanya valid 24 jam');
 
 		if( !$this->email->send() ) {
 			echo $this->email->print_debugger(['headers']);
