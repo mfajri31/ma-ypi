@@ -69,7 +69,7 @@
   </div>
 
   <div class="footer-copyright text-center py-3" style="background-color: #104433;">
-  	Copyright &copy; 2018
+  	Copyright &copy; MAYPI <?= date('Y'); ?> 
   </div>
 
 </footer>

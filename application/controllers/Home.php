@@ -6,10 +6,12 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Berita_m');
 	}
 
 	public function index()
 	{
-		$this->template->frontend('frontend/home');
+		$data['berita'] = $this->Berita_m->tampil()->result_array();
+		$this->template->frontend('frontend/home', $data);
 	}
 }

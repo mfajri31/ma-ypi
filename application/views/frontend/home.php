@@ -1,4 +1,4 @@
-<!-- slide -->
+slide -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -131,16 +131,18 @@
       </div>
     </div>
     <div class="row">
-      <?php for( $i=1; $i<=4; $i++ ) : ?>
+      <?php foreach($berita as $berita) : ?>
       <div class="col-md-3 mb-3">
         <div class="card">
-          <img class="card-img-top" src="<?= base_url('assets/img/logo.png'); ?>" alt="Card image cap">
+          <img class="card-img-top" src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" alt="Card image cap">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title"><?= $berita['judul'] ?></h5>
+            <p class="card-text"><?= word_limiter($berita['isi'], 10); ?></p>
+            <a href="<?= base_url('berita/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary btn-block">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
-      <?php endfor; ?>
+      <?php endforeach; ?>
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
