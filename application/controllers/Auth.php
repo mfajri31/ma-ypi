@@ -114,6 +114,7 @@ class Auth extends CI_Controller {
 		$this->session->unset_userdata('email');
 		$this->session->unset_userdata('nama');
 		$this->session->unset_userdata('level');
+		$this->session->unset_userdata('cek_password');
 		redirect('auth');
 	}
 

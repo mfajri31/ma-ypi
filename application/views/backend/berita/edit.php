@@ -16,8 +16,18 @@
 					<form action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>Judul</label>
-							<input type="text" name="judul" class="form-control" value="">
+							<input type="text" name="judul" class="form-control" value="<?= $berita['judul']; ?>">
 							<?= form_error('judul'); ?>
+						</div>
+						<div class="form-group">
+							<label>Isi</label>
+							<textarea name="isi" id="editor"><?= $berita['isi'] ?></textarea>
+						</div>
+						<div class="form-group">
+							<label>Foto</label> <br>
+							<img src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" width="200">
+							<input type="file" name="foto" class="form-control" value="<?= set_value('foto'); ?>">
+							<?= $this->session->flashdata('error_foto'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
 							<i class="fa fa-plus"></i> Simpan

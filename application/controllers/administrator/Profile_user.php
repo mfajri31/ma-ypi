@@ -6,6 +6,7 @@ class Profile_user extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+        cekLogin();
 		$this->load->library('form_validation');
 		$this->load->model('User_m');
 		$this->load->model('Token_m');
@@ -41,7 +42,7 @@ class Profile_user extends CI_Controller {
                 $this->upload->initialize($config);
     
                 if( $this->upload->do_upload('foto') ){
-                    $email  = $this->input->post('email');
+                    $email     = $this->input->post('email');
                     $user      = $this->User_m->tampil(null, $email)->row_array();
                     $old_image = $user['foto'];
 
@@ -124,8 +125,22 @@ class Profile_user extends CI_Controller {
         	$data['title'] = 'Ganti Email';
 			$this->template->backend('backend/profile_user/ganti_email', $data);
         } else {
-        	$this->session->unset_userdata('cek_password');
-        	echo "oke";
+            $id    = userLogin()['id'];
+            $email = $this->input->post('email');
+            $token = angka_random();
+
+            $this->db->set('status', 0);
+            $this->db->set('email', $email);
+            $this->db->where('id', $id);
+            $this->db->update('tb_user');
+
+            $this->Token_m->tambah($email, $token);
+
+        	$this->_sendEmail($token);
+
+             $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Email telah diganti. harap cek pesan pada email anda untuk memverifikasi!</div>');
+
+            $this->logout();
         }
 
 	}
@@ -166,4 +181,39 @@ class Profile_user extends CI_Controller {
             }
         }
 	}
+
+    private function _sendEmail($token)
+    {
+        $this->load->library('email');
+
+        $config              = [];
+        $config['protocol']  = 'smtp';
+        $config['smtp_host'] = 'ssl://smtp.googlemail.com';
+        $config['smtp_user'] = 'robotpesan@gmail.com';
+        $config['smtp_pass'] = 'terukis123';
+        $config['smtp_port'] = 465;
+        $config['mailtype']  = 'html';
+        $config['charset']   = 'utf-8';
+        $config['newline']   = "\r\n";
+        $this->email->initialize($config);
+
+        $this->email->from('robotpesan@gmail.com', 'MA-YPI Martapura OKUT');
+        $this->email->to($this->input->post('email'));
+
+        $this->email->subject('Verifikasi User');
+        $this->email->message('Klik link berikut ini untuk memverifikasi : <a href="' . base_url().'auth/verify?email=' . $this->input->post('email') . '&token=' . $token . '">Aktivasi</a> <br> Pesan ini hanya valid 24 jam');
+
+        if( !$this->email->send() ) {
+            echo $this->email->print_debugger(['headers']);
+        }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('nama');
+        $this->session->unset_userdata('level');
+        $this->session->unset_userdata('cek_password');
+        redirect('auth');
+    }
 }

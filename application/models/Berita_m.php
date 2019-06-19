@@ -32,12 +32,6 @@ class Berita_m extends CI_Model {
 		$this->db->insert('tb_berita', $data);
 	}
 
-
-	public function edit($id)
-	{
-
-	}
-
 	public function hapus($id)
 	{
 		$this->db->delete('tb_berita', ['id'=>$id]);

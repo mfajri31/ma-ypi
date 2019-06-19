@@ -6,6 +6,7 @@ class User extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		cekLogin();
 		cekLevel();
 		$this->load->library('form_validation');
 		$this->load->model('User_m');

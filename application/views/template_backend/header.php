@@ -96,20 +96,20 @@
       <li class="header">MENU</li>
 
       <li class="<?= active_menu('') || active_menu('dashboard'); ?>">
-        <a href="<?= base_url('administrator'); ?>"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+        <a href="<?= base_url('administrator'); ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
       </li>
-      <li class="treeview">
+      <li class="treeview <?= active_menu('header') || active_menu('sambutan'); ?>">
         <a href="">
-          <i class="fa fa-dashboard"></i> <span>Beranda</span>
+          <i class="fa fa-home"></i> <span>Manajemen Beranda</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="">
+          <li>
             <a href="<?= base_url('administrator/header'); ?>"><i class="fa fa-circle-o"></i> Header Slide</a>
           </li>
-          <li>
+          <li class="<?= active_menu('sambutan'); ?>">
             <a href="<?= base_url('administrator/sambutan'); ?>"><i class="fa fa-circle-o"></i> Kata Sambutan</a>
           </li>
         </ul>

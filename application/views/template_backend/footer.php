@@ -18,7 +18,7 @@
 <script src="<?= base_url('assets/backend/'); ?>dist/js/adminlte.min.js"></script>
 <script>
     tinymce.init({
-      selector: "#isi_berita",
+      selector: "#editor",
       height: 300,
       plugins: 'preview fullscreen link codesample table charmap hr anchor advlist lists wordcount help emoticons autolink visualchars pagebreak nonbreaking',
       toolbar: 'formatselect bold italic strikethrough underline superscript subscript codesample | emoticons | forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent |insertdatetime | removeformat | fullscreen'
