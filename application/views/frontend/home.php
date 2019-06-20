@@ -7,7 +7,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?= base_url('assets/img/1.jpg'); ?>" width="100%" class="gambar-slide">
+      <img src="<?= base_url('assets/img/header/'.$header[0]['slide']); ?>" width="100%" class="gambar-slide">
       <div class="container">
         <div class="carousel-caption">
           
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url('assets/img/2.jpg'); ?>" width="100%" class="gambar-slide">
+      <img src="<?= base_url('assets/img/header/'.$header[1]['slide']); ?>" width="100%" class="gambar-slide">
       <div class="container">
         <div class="carousel-caption">
           
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?= base_url('assets/img/3.jpg'); ?>" width="100%" class="gambar-slide">
+      <img src="<?= base_url('assets/img/header/'.$header[2]['slide']); ?>" width="100%" class="gambar-slide">
       <div class="container">
         <div class="carousel-caption">
           
@@ -75,17 +75,19 @@
 <!-- sambutan -->
 <section id="sambutan" class="mt-4 pt-4 pb-4 bg-abu">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center mb-4">Sambutan Kepala Sekolah</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-2"></div>
+      <div class="col-md-10 text-center">
+        <h1 class="mb-3"><?= $sambutan['judul']; ?></h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-2 text-center mb-3">
-        <img src="<?= base_url('assets/img/kepsek.jpg'); ?>" width="150" height="160" class="img thumbnail rounded-circle">
+        <img src="<?= base_url('assets/img/sambutan/'.$sambutan['foto']); ?>" class="img-fluid">
       </div>
       <div class="col-md-10">
-        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam dignissimos incidunt amet, quam, expedita nisi dolorum voluptatem reprehenderit eos nesciunt, minima debitis quod a quisquam vero eum nostrum enim! Ad deleniti tempore eaque recusandae sint? Iusto sapiente alias, dicta qui unde aut numquam fugiat repellendus, obcaecati nam, aspernatur ipsum facilis asperiores rerum voluptas quam. Quas voluptas sequi nostrum, corrupti accusantium natus, ullam dolorem temporibus architecto labore praesentium, dolor maxime ut ipsa tempore eveniet veritatis enim quaerat necessitatibus sapiente quia culpa adipisci sint? At omnis ab, error eius, minus animi tempore mollitia voluptatum saepe libero? Delectus cum incidunt a consectetur!</p>
+        <?= word_limiter($sambutan['isi'], 60); ?>
+        <a href="">Selengkapnya</a>
       </div>
     </div>
   </div>

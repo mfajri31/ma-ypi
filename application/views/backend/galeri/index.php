@@ -5,7 +5,7 @@
 </style>
 
 <section class="content-header">
-  <h1>Manajemen Beranda</h1>
+  <h1>Manajemen Galeri</h1>
 </section>
 
 <section class="content">
@@ -16,7 +16,10 @@
 
    		<div class="box">
    			<div class="box-header">
-   				<h4 class="pull-left">Sambutan</h4>
+   				<h4 class="pull-left">Daftar Galeri</h4>
+		    	<a href="<?= base_url('administrator/galeri/tambah'); ?>" class="btn btn-success btn-sm pull-right">
+		    		<i class="fa fa-user-plus"></i> Tambah
+		    	</a>
    			</div>
 	        <div class="box-body">
         	  <div class="table-responsive">
@@ -24,24 +27,22 @@
 		          	<thead>
 			            <tr>
 			              <th>Foto</th>
-			              <th>Judul</th>
-			              <th>Isi</th>
 			              <th>Aksi</th>
 			            </tr>
 		          	</thead>
 		            <tbody>
 		          	<?php 
-		          		foreach( $sambutan as $sambutan ) :
+		          		// $no = 1;
+		          		// foreach( $berita as $berita ) :
 		          	 ?>
 		            	<tr>
-			            	<td width="70"><img src="<?= base_url('assets/img/sambutan/'.$sambutan['foto']); ?>" width="60"></td>
-			            	<td><?= $sambutan['judul']; ?></td>
-			            	<td><?= word_limiter($sambutan['isi'], 20); ?></td>
-			            	<td width="100" align="center">
-			            		<a href="<?= base_url('administrator/sambutan/edit/'.$sambutan['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+			            	<td></td>
+			            	<td width="150" align="center">
+			            		<a href="<?= base_url('administrator/galeri/edit/'); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+			            		<a href="<?= base_url('administrator/galeri/hapus/'); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
 			            	</td>
 			            </tr>
-			        <?php endforeach; ?>
+			        <?php //endforeach; ?>
 		            </tbody>
 		          </table>
 	          </div>

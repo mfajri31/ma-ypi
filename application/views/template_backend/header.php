@@ -106,13 +106,16 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li>
-            <a href="<?= base_url('administrator/header'); ?>"><i class="fa fa-circle-o"></i> Header Slide</a>
+          <li class="<?= active_menu('header'); ?>">
+            <a href="<?= base_url('administrator/header'); ?>"><i class="fa fa-circle-o"></i> Header</a>
           </li>
           <li class="<?= active_menu('sambutan'); ?>">
-            <a href="<?= base_url('administrator/sambutan'); ?>"><i class="fa fa-circle-o"></i> Kata Sambutan</a>
+            <a href="<?= base_url('administrator/sambutan'); ?>"><i class="fa fa-circle-o"></i> Sambutan</a>
           </li>
         </ul>
+      </li>
+      <li class="<?= active_menu('galeri'); ?>">
+        <a href="<?= base_url('administrator/galeri'); ?>"><i class="fa fa-image"></i> <span>Manajemen Galeri</span></a>
       </li>
       <li class="<?= active_menu('berita'); ?>">
         <a href="<?= base_url('administrator/berita'); ?>"><i class="fa fa-newspaper-o"></i> <span>Manajemen Berita</span></a>

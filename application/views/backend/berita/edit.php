@@ -30,7 +30,7 @@
 							<?= $this->session->flashdata('error_foto'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
-							<i class="fa fa-plus"></i> Simpan
+							<i class="fa fa-download"></i> Simpan
 						</button>
 					</form>
 				</div>
