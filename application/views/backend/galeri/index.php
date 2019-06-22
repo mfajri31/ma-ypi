@@ -31,18 +31,15 @@
 			            </tr>
 		          	</thead>
 		            <tbody>
-		          	<?php 
-		          		// $no = 1;
-		          		// foreach( $berita as $berita ) :
-		          	 ?>
+		          	<?php foreach( $galeri as $galeri ) : ?>
 		            	<tr>
-			            	<td></td>
+			            	<td><img src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" width="100"></td>
 			            	<td width="150" align="center">
-			            		<a href="<?= base_url('administrator/galeri/edit/'); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
-			            		<a href="<?= base_url('administrator/galeri/hapus/'); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
+			            		<a href="<?= base_url('administrator/galeri/edit/'.$galeri['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+			            		<a href="<?= base_url('administrator/galeri/hapus/'.$galeri['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
 			            	</td>
 			            </tr>
-			        <?php //endforeach; ?>
+			        <?php endforeach; ?>
 		            </tbody>
 		          </table>
 	          </div>

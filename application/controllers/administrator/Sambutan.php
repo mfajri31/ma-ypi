@@ -15,7 +15,7 @@ class Sambutan extends CI_Controller {
 	{
 		$data['title']    = 'Sambutan';
 		$data['sambutan'] = $this->Sambutan_m->tampil()->result_array();
-		$this->template->backend('backend/sambutan/index', $data);
+		$this->template->backend('backend/beranda/sambutan/index', $data);
 	}
 
 	public function edit($id)
@@ -30,7 +30,7 @@ class Sambutan extends CI_Controller {
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Edit Sambutan';
 			$data['sambutan'] = $this->Sambutan_m->tampil($id)->row_array();
-			$this->template->backend('backend/sambutan/edit', $data);
+			$this->template->backend('backend/beranda/sambutan/edit', $data);
 		} else {
 			$judul = $this->input->post('judul');
 			$isi   = $this->input->post('isi');

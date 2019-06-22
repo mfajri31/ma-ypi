@@ -104,16 +104,16 @@
       </div>
     </div>
     <div class="row">
-      <?php for( $i=1; $i<=4; $i++ ) : ?>
+      <?php foreach( $galeri as $galeri ) : ?>
       <div class="col-md-3 mb-3">
         <div class="card">
-          <img class="card-img-top" src="<?= base_url('assets/img/logo.png'); ?>" alt="Card image cap">
+          <img class="card-img-top" src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" alt="Card image cap">
           <div class="card-body">
 
           </div>
         </div>
       </div>
-      <?php endfor; ?>
+      <?php endforeach; ?>
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
@@ -139,7 +139,7 @@
           <img class="card-img-top" src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><?= $berita['judul'] ?></h5>
-            <p class="card-text"><?= word_limiter($berita['isi'], 10); ?></p>
+            <p class="card-text"><?= word_limiter($berita['isi'], 8); ?></p>
             <a href="<?= base_url('berita/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary btn-block">Baca Selengkapnya</a>
           </div>
         </div>

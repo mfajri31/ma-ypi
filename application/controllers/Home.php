@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Header_m');
 		$this->load->model('Sambutan_m');
+		$this->load->model('Galeri_m');
 		$this->load->model('Berita_m');
 	}
 
@@ -15,6 +16,7 @@ class Home extends CI_Controller {
 	{
 		$data['header']   = $this->Header_m->tampil()->result_array();
 		$data['sambutan'] = $this->Sambutan_m->tampil()->row_array();
+		$data['galeri']   = $this->Galeri_m->tampil()->result_array();
 		$data['berita']   = $this->Berita_m->tampil()->result_array();
 		$this->template->frontend('frontend/home', $data);
 	}

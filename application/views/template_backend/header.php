@@ -114,6 +114,28 @@
           </li>
         </ul>
       </li>
+      <li class="treeview <?= active_menu('sejarah') || active_menu('visi_misi') || active_menu('sarana_prasarana') || active_menu('struktur_organisasi'); ?>">
+        <a href="">
+          <i class="fa fa-user"></i> <span>Manajemen Profil</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="<?= active_menu('sejarah'); ?>">
+            <a href="<?= base_url('administrator/sejarah'); ?>"><i class="fa fa-circle-o"></i> Sejarah</a>
+          </li>
+          <li class="<?= active_menu('visi_misi'); ?>">
+            <a href="<?= base_url('administrator/visi_misi'); ?>"><i class="fa fa-circle-o"></i> Visi dan Misi</a>
+          </li>
+          <li class="<?= active_menu('sarana_prasarana'); ?>">
+            <a href="<?= base_url('administrator/sarana_prasarana'); ?>"><i class="fa fa-circle-o"></i> Sarana dan Prasarana</a>
+          </li>
+          <li class="<?= active_menu('struktur_organisasi'); ?>">
+            <a href="<?= base_url('administrator/struktur_organisasi'); ?>"><i class="fa fa-circle-o"></i> Struktur Organisasi</a>
+          </li>
+        </ul>
+      </li>
       <li class="<?= active_menu('galeri'); ?>">
         <a href="<?= base_url('administrator/galeri'); ?>"><i class="fa fa-image"></i> <span>Manajemen Galeri</span></a>
       </li>

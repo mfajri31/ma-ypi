@@ -15,11 +15,12 @@
 				<div class="box-body">
 					<form action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							<label>Foto</label>
-							<input type="file" name="foto">
+							<label>Foto</label> <br>
+							<img src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" width="200">
+							<input type="file" name="foto" class="form-control">
 						</div>
-						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
-							<i class="fa fa-plus"></i> Tambah
+						<button type="submit" name="submit" class="btn btn-success" style="margin-bottom: 15px;">
+							<i class="fa fa-download"></i> Simpan
 						</button>
 					</form>
 				</div>

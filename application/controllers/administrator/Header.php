@@ -15,7 +15,7 @@ class Header extends CI_Controller {
 	{	
 		$data['title']  = 'Header';
 		$data['header'] = $this->Header_m->tampil()->result_array();
-		$this->template->backend('backend/header/index', $data);
+		$this->template->backend('backend/beranda/header/index', $data);
 	}
 
 	public function edit($id)
@@ -29,7 +29,7 @@ class Header extends CI_Controller {
 		if( $this->form_validation->run() == FALSE ){
 			$data['title']  = 'Edit Header';
 			$data['header'] = $this->Header_m->tampil($id)->row_array();
-			$this->template->backend('backend/header/edit', $data);
+			$this->template->backend('backend/beranda/header/edit', $data);
 		} else {
 			$slide = $_FILES['slide']['name'];
 

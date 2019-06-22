@@ -16,9 +16,9 @@
 					<form action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>Foto</label>
-							<input type="file" name="foto">
+							<input type="file" name="files[]" class="form-control" multiple required>
 						</div>
-						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
+						<button type="submit" name="submit" class="btn btn-success" style="margin-bottom: 15px;">
 							<i class="fa fa-plus"></i> Tambah
 						</button>
 					</form>
