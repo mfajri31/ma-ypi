@@ -3,17 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Galeri_m extends CI_Model {
 
-	public function tampil($id=null){
-		$this->db->order_by('id', 'DESC');
-        $this->db->limit(8);
-		$query = $this->db->get('tb_galeri');
+	public function tampil($id=null, $limit=null)
+    {
+        if( $limit != null ){
+            $this->db->limit($limit);
+        }
 
-		if( $id != null ){
-			$query = $this->db->get_where('tb_galeri', ['id'=>$id]);
-		}
+        $this->db->order_by('id', 'DESC');
+        $query = $this->db->get('tb_galeri');
+
+        if( $id !=null ){
+            $query = $this->db->get_where('tb_galeri', ['id'=>$id]);
+        }
 
 		return $query;
 	}
+
+    public function tampil_full()
+    {
+
+    }
 
 	public function tambah($foto=[])
 	{

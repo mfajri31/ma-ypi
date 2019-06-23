@@ -22,6 +22,7 @@
 		    	</a>
    			</div>
 	        <div class="box-body">
+	        	Jumlah Foto : <?= $jumlah; ?>
         	  <div class="table-responsive">
 		          <table class="table table-bordered">
 		          	<thead>

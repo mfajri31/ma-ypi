@@ -10,7 +10,10 @@ class Galeri extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Galeri';
+		$this->load->model('Galeri_m');
+
+		$data['title']  = 'Galeri';
+		$data['galeri'] = $this->Galeri_m->tampil()->result_array();
 		$this->template->frontend('frontend/galeri', $data);
 	}
 }

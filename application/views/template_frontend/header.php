@@ -57,7 +57,7 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item">
-		        <a class="nav-link <?= active(''); ?>" href="<?= base_url(); ?>">BERANDA</a>
+		        <a class="nav-link <?= active('') || active('home'); ?>" href="<?= base_url(); ?>">BERANDA</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle <?= active('sejarah') || active('visi_misi') || active('sarana_prasarana') || active('struktur_organisasi'); ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

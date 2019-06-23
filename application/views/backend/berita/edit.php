@@ -26,7 +26,7 @@
 						<div class="form-group">
 							<label>Foto</label> <br>
 							<img src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" width="200">
-							<input type="file" name="foto" class="form-control" value="<?= set_value('foto'); ?>">
+							<input type="file" name="foto" class="form-control">
 							<?= $this->session->flashdata('error_foto'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">

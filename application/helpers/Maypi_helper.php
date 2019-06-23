@@ -4,7 +4,10 @@ function sidebar()
 {
 	$ci = get_instance();
 
-	$ci->load->view('template_frontend/sidebar');
+	$ci->load->model('Berita_m');
+
+	$data['berita'] = $ci->Berita_m->tampil()->result_array();
+	$ci->load->view('template_frontend/sidebar', $data);
 }
 
 function active($param)

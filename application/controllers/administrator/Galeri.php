@@ -14,6 +14,7 @@ class Galeri extends CI_Controller {
 	{
 		$data['title']  = 'Galeri';
 		$data['galeri'] = $this->Galeri_m->tampil()->result_array();
+		$data['jumlah'] = count($this->Galeri_m->tampil()->result_array());
 		$this->template->backend('backend/galeri/index', $data);
 	}
 
@@ -60,7 +61,7 @@ class Galeri extends CI_Controller {
 	public function edit($id)
 	{
 		$data['title']  = 'Edit Galeri';
-		$data['galeri'] = $this->Galeri_m->tampil($id)->row_array();
+		$data['galeri'] = $this->Galeri_m->tampil($id, null)->row_array();
 		$this->template->backend('backend/galeri/edit', $data);
 
 		if( isset($_POST['submit']) ){

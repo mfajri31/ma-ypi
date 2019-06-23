@@ -16,8 +16,15 @@ class Home extends CI_Controller {
 	{
 		$data['header']   = $this->Header_m->tampil()->result_array();
 		$data['sambutan'] = $this->Sambutan_m->tampil()->row_array();
-		$data['galeri']   = $this->Galeri_m->tampil()->result_array();
+		$data['galeri']   = $this->Galeri_m->tampil(null, 8)->result_array();
 		$data['berita']   = $this->Berita_m->tampil()->result_array();
 		$this->template->frontend('frontend/home', $data);
+	}
+
+	public function sambutan()
+	{
+		$data['title']    = 'Sambutan';
+		$data['sambutan'] = $this->Sambutan_m->tampil()->row_array();
+		$this->template->frontend('frontend/sambutan', $data);
 	}
 }

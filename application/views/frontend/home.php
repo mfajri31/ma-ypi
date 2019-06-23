@@ -87,7 +87,7 @@
       </div>
       <div class="col-md-10">
         <?= word_limiter($sambutan['isi'], 60); ?>
-        <a href="">Selengkapnya</a>
+        <a href="<?= base_url('home/sambutan'); ?>">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -108,16 +108,13 @@
       <div class="col-md-3 mb-3">
         <div class="card">
           <img class="card-img-top" src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" alt="Card image cap">
-          <div class="card-body">
-
-          </div>
         </div>
       </div>
       <?php endforeach; ?>
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-        <a href="" class="btn btn-primary">Lihat Lebih Banyak</a>
+        <a href="<?= base_url('galeri'); ?>" class="btn btn-primary">Lihat Lebih Banyak</a>
       </div>
     </div>
   </div>
@@ -140,7 +137,7 @@
           <div class="card-body">
             <h5 class="card-title"><?= $berita['judul'] ?></h5>
             <p class="card-text"><?= word_limiter($berita['isi'], 8); ?></p>
-            <a href="<?= base_url('berita/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary btn-block">Baca Selengkapnya</a>
+            <a href="<?= base_url('berita/read/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary btn-block">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -148,7 +145,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-        <a href="" class="btn btn-primary">Lihat Lebih Banyak</a>
+        <a href="<?= base_url('berita'); ?>" class="btn btn-primary">Lihat Lebih Banyak</a>
       </div>
     </div>
   </div>
