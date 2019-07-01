@@ -18,6 +18,8 @@
       width: 50px;
       height: 50px;
       max-width: 50px;
+      /*margin-left: -6px;*/
+      /*margin-top: -5px;*/
     }
   </style>
 
