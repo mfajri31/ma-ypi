@@ -20,6 +20,15 @@
 				height: 250px;
 			}
 		}
+
+		ul.eskul {
+			margin-left: -15px;
+		}
+
+		ul.eskul li {
+			padding-bottom: 15px;
+			color: #007bff;
+		}
     </style>
 
     <title>MA YPI <?= @$title == '' ? '' : ' - '.$title; ?></title>
