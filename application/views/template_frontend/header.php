@@ -69,19 +69,9 @@
 		          <a class="dropdown-item" href="<?= base_url('sarana_prasarana'); ?>">SARANA DAN PRASARANA</a>
 		          <a class="dropdown-item" href="<?= base_url('struktur_organisasi') ?>">STRUKTUR ORGANISASI</a>
 		      </li>
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle <?= active('tilawatil_quran') || active('seni_baca_quran') || active('robbana') || active('kaligrafi') || active('pmr') || active('pramuka') || active('kegiatan_keagamaan') || active('futsal') ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          EKSTRAKURIKULER
+		      <li class="nav-item">
+		        <a class="nav-link <?= active('ekstrakurikuler') ?>" href="<?= base_url('ekstrakurikuler'); ?>">EKSTRAKURIKULER
 		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="<?= base_url('tilawatil_quran'); ?>">TILAWATIL QUR'AN</a>
-		          <a class="dropdown-item" href="<?= base_url('seni_baca_quran'); ?>">SENI BACA AL-QUR'AN</a>
-		          <a class="dropdown-item" href="<?= base_url('robbana'); ?>">ROBBANA</a>
-		          <a class="dropdown-item" href="<?= base_url('kaligrafi'); ?>">KALIGRAFI</a>
-		          <a class="dropdown-item" href="<?= base_url('pmr'); ?>">PMR</a>
-		          <a class="dropdown-item" href="<?= base_url('pramuka'); ?>">PRAMUKA</a>
-		          <a class="dropdown-item" href="<?= base_url('kegiatan_keagamaan'); ?>">KEGIATAN KEAGAMAAN</a>
-		          <a class="dropdown-item" href="<?= base_url('futsal'); ?>">FUTSAL</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link <?= active('guru') ?>" href="<?= base_url('guru'); ?>">GURU</a>
