@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2019 at 07:24 PM
+-- Generation Time: Jul 03, 2019 at 07:19 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -53,6 +53,19 @@ INSERT INTO `tb_berita` (`id`, `judul`, `isi`, `penulis`, `slug`, `foto`, `tgl_p
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_ekstrakurikuler`
+--
+
+CREATE TABLE `tb_ekstrakurikuler` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(30) NOT NULL,
+  `isi` text NOT NULL,
+  `foto` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_galeri`
 --
 
@@ -78,11 +91,25 @@ INSERT INTO `tb_galeri` (`id`, `foto`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tb_guru`
+--
+
+CREATE TABLE `tb_guru` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `jabatan` varchar(50) NOT NULL,
+  `mapel` varchar(50) NOT NULL,
+  `jum_jam` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tb_header`
 --
 
 CREATE TABLE `tb_header` (
-  `id` int(11) NOT NULL,
+  `id` int(1) NOT NULL,
   `slide` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -94,6 +121,58 @@ INSERT INTO `tb_header` (`id`, `slide`) VALUES
 (1, '846d6995b3c6d32ea101f678872eb0c7.jpg'),
 (2, 'e2a14deee7b850c8f259fa5cc32570d0.jpg'),
 (3, 'be074f3badbdc60db1182964a8e24b50.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kontak`
+--
+
+CREATE TABLE `tb_kontak` (
+  `id` int(1) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telp` varchar(14) NOT NULL,
+  `alamat` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_pengumuman`
+--
+
+CREATE TABLE `tb_pengumuman` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(80) NOT NULL,
+  `isi` text NOT NULL,
+  `foto` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_ppdb`
+--
+
+CREATE TABLE `tb_ppdb` (
+  `id` int(1) NOT NULL,
+  `judul` varchar(80) NOT NULL,
+  `isi` text NOT NULL,
+  `foto` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_prestasi`
+--
+
+CREATE TABLE `tb_prestasi` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(80) NOT NULL,
+  `keterangan` text NOT NULL,
+  `foto` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -239,15 +318,51 @@ ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_ekstrakurikuler`
+--
+ALTER TABLE `tb_ekstrakurikuler`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_galeri`
 --
 ALTER TABLE `tb_galeri`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_header`
 --
 ALTER TABLE `tb_header`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_pengumuman`
+--
+ALTER TABLE `tb_pengumuman`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_ppdb`
+--
+ALTER TABLE `tb_ppdb`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_prestasi`
+--
+ALTER TABLE `tb_prestasi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -303,16 +418,52 @@ ALTER TABLE `tb_berita`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `tb_ekstrakurikuler`
+--
+ALTER TABLE `tb_ekstrakurikuler`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_galeri`
 --
 ALTER TABLE `tb_galeri`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
+-- AUTO_INCREMENT for table `tb_guru`
+--
+ALTER TABLE `tb_guru`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tb_header`
 --
 ALTER TABLE `tb_header`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_pengumuman`
+--
+ALTER TABLE `tb_pengumuman`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_ppdb`
+--
+ALTER TABLE `tb_ppdb`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_prestasi`
+--
+ALTER TABLE `tb_prestasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_sambutan`
