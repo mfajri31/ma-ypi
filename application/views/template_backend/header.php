@@ -138,11 +138,50 @@
           </li>
         </ul>
       </li>
+
+      <li class="treeview <?= active_menu('prestasi_siswa') || active_menu('ekstrakurikuler'); ?>">
+        <a href="">
+          <i class="fa fa-home"></i> <span>Manajemen Siswa</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="<?= active_menu('prestasi_siswa'); ?>">
+            <a href="<?= base_url('administrator/prestasi_siswa'); ?>"><i class="fa fa-circle-o"></i> Prestasi Siswa</a>
+          </li>
+          <li class="<?= active_menu('ekstrakurikuler'); ?>">
+            <a href="<?= base_url('administrator/ekstrakurikuler'); ?>"><i class="fa fa-circle-o"></i> Ekstrakurikuler</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="<?= active_menu('guru'); ?>">
+          <a href="<?= base_url('administrator/guru'); ?>"><i class="fa fa-users"></i> <span>Manajemen Guru</span></a>
+      </li>
+
+      <li class="<?= active_menu('program_unggulan'); ?>">
+          <a href="<?= base_url('administrator/program_unggulan'); ?>"><i class="fa fa-diamond"></i> <span>Manajemen P.Unggulan</span></a>
+      </li>
+
+      <li class="<?= active_menu('pengumuman'); ?>">
+          <a href="<?= base_url('administrator/pengumuman'); ?>"><i class="fa fa-info-circle"></i> <span>Manajemen Pengumuman</span></a>
+      </li>
+
+      <li class="<?= active_menu('ppdb'); ?>">
+        <a href="<?= base_url('administrator/ppdb'); ?>"><i class="fa fa-image"></i> <span>Manajemen PPDB</span></a>
+      </li>
+
       <li class="<?= active_menu('galeri'); ?>">
         <a href="<?= base_url('administrator/galeri'); ?>"><i class="fa fa-image"></i> <span>Manajemen Galeri</span></a>
       </li>
+
       <li class="<?= active_menu('berita'); ?>">
         <a href="<?= base_url('administrator/berita'); ?>"><i class="fa fa-newspaper-o"></i> <span>Manajemen Berita</span></a>
+      </li>
+
+      <li class="<?= active_menu('kontak'); ?>">
+          <a href="<?= base_url('administrator/kontak'); ?>"><i class="fa fa-phone"></i> <span>Manajemen Kontak</span></a>
       </li>
 
       <?php if( $this->session->userdata('level') == 'superadmin' ) : ?>

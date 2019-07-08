@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2019 at 07:19 PM
+-- Generation Time: Jul 08, 2019 at 01:20 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -58,10 +58,24 @@ INSERT INTO `tb_berita` (`id`, `judul`, `isi`, `penulis`, `slug`, `foto`, `tgl_p
 
 CREATE TABLE `tb_ekstrakurikuler` (
   `id` int(11) NOT NULL,
-  `judul` varchar(30) NOT NULL,
-  `isi` text NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `keterangan` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_ekstrakurikuler`
+--
+
+INSERT INTO `tb_ekstrakurikuler` (`id`, `nama`, `keterangan`, `foto`) VALUES
+(1, 'Tilawatil Qur\'an', '<p>Tilawatil Qur\'an adalah</p>', 'default.png'),
+(2, 'Seni Baca Qur\'an', '<p>Seni Baca Qur\'an adalah</p>', 'default.png'),
+(3, 'Robbana', '<p>Robbana adalah</p>', 'e0ca117c8f4d9ceb2d8af012744cb739.png'),
+(4, 'Kaligrafi', '<p>Kaligrafi adalah</p>', 'default.png'),
+(5, 'Palang Merah Remaja', '<p>Palang Merah Remaja adalah</p>', 'default.png'),
+(6, 'Pramuka', '<p>Pramuka adalah</p>', 'f68a3188925cb8d12b64ea95b1f0ebfd.jpg'),
+(7, 'Kegitatan Keagamaan', '<p>Kegitatan Keagamaan adalah</p>', 'default.png'),
+(8, 'Futsal', '<p>Futsal adalah</p>', 'default.png');
 
 -- --------------------------------------------------------
 
@@ -99,8 +113,20 @@ CREATE TABLE `tb_guru` (
   `nama` varchar(50) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
   `mapel` varchar(50) NOT NULL,
-  `jum_jam` int(3) NOT NULL
+  `jum_jam` int(3) NOT NULL,
+  `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_guru`
+--
+
+INSERT INTO `tb_guru` (`id`, `nama`, `jabatan`, `mapel`, `jum_jam`, `foto`) VALUES
+(1, 'Syamsul Arifin, S.Pd.I', 'Kepala Madrasah', 'Akidah Akhlak', 6, '4217aa48a64d56dd4bc0cf1f4a22eb7e.jpg'),
+(2, 'Heri Yanto, S.Pd', 'Waka Kurikulum', 'Bahasa Inggris', 12, '7cfedb1929b075457b263336b998254a.png'),
+(4, 'Muhammad Ansori, S.Pd', 'Waka Kesiswaan', 'Bahasa Indonesia', 12, '10eada2a9f7e89d13c056644dd5b2f1a.png'),
+(5, 'Isrohlaini, S.P.d.I', 'Bendahara', 'Bahasa Arab', 6, '84248d1e072150907f9385bd01d8b805.png'),
+(6, 'Kencana Wati, S.Pd', 'Guru Wali Kelas XII', 'Matematika', 12, 'cf8e2a831045b9b73c8396dd4dc9d482.jpg');
 
 -- --------------------------------------------------------
 
@@ -173,6 +199,33 @@ CREATE TABLE `tb_prestasi` (
   `keterangan` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_prestasi`
+--
+
+INSERT INTO `tb_prestasi` (`id`, `judul`, `keterangan`, `foto`) VALUES
+(1, 'Juara 1 Umum', 'Tingkat Provinsi', '46b3febf0f05fe8353ca6bbabc15f45d.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_program_unggulan`
+--
+
+CREATE TABLE `tb_program_unggulan` (
+  `id` int(1) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `keterangan` text NOT NULL,
+  `foto` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_program_unggulan`
+--
+
+INSERT INTO `tb_program_unggulan` (`id`, `judul`, `keterangan`, `foto`) VALUES
+(1, 'Program Unggulan', '<p>Program unggulan kami adalah</p>', 'ccc702b1e9939e604065de7179f25b7d.png');
 
 -- --------------------------------------------------------
 
@@ -366,6 +419,12 @@ ALTER TABLE `tb_prestasi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_program_unggulan`
+--
+ALTER TABLE `tb_program_unggulan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tb_sambutan`
 --
 ALTER TABLE `tb_sambutan`
@@ -421,7 +480,7 @@ ALTER TABLE `tb_berita`
 -- AUTO_INCREMENT for table `tb_ekstrakurikuler`
 --
 ALTER TABLE `tb_ekstrakurikuler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_galeri`
@@ -433,7 +492,7 @@ ALTER TABLE `tb_galeri`
 -- AUTO_INCREMENT for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_header`
@@ -463,7 +522,13 @@ ALTER TABLE `tb_ppdb`
 -- AUTO_INCREMENT for table `tb_prestasi`
 --
 ALTER TABLE `tb_prestasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tb_program_unggulan`
+--
+ALTER TABLE `tb_program_unggulan`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_sambutan`

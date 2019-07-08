@@ -78,15 +78,21 @@
 		          <a class="dropdown-item" href="<?= base_url('sarana_prasarana'); ?>">SARANA DAN PRASARANA</a>
 		          <a class="dropdown-item" href="<?= base_url('struktur_organisasi') ?>">STRUKTUR ORGANISASI</a>
 		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle <?= active('prestasi_siswa') || active('ekstrakurikuler') ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          SISWA
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="<?= base_url('prestasi_siswa'); ?>">PRESTASI SISWA</a>
+		          <a class="dropdown-item" href="<?= base_url('ekstrakurikuler'); ?>">EKSTRAKURIKULER</a>
+		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link <?= active('ekstrakurikuler') ?>" href="<?= base_url('ekstrakurikuler'); ?>">EKSTRAKURIKULER
+		        <a class="nav-link <?= active('guru') ?>" href="<?= base_url('guru'); ?>"> GURU
 		        </a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link <?= active('guru') ?>" href="<?= base_url('guru'); ?>">GURU</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link <?= active('prestasi_siswa') ?>" href="<?= base_url('prestasi_siswa'); ?>">PRESTASI SISWA</a>
+		        <a class="nav-link <?= active('program_unggulan') ?>" href="<?= base_url('program_unggulan'); ?>"> PROGRAM UNGGULAN
+		        </a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link <?= active('pengumuman') ?>" href="<?= base_url('pengumuman'); ?>">PENGUMUMAN</a>
