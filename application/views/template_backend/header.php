@@ -169,7 +169,7 @@
       </li>
 
       <li class="<?= active_menu('ppdb'); ?>">
-        <a href="<?= base_url('administrator/ppdb'); ?>"><i class="fa fa-image"></i> <span>Manajemen PPDB</span></a>
+        <a href="<?= base_url('administrator/ppdb'); ?>"><i class="fa fa-user-plus"></i> <span>Manajemen PPDB</span></a>
       </li>
 
       <li class="<?= active_menu('galeri'); ?>">

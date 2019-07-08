@@ -49,7 +49,7 @@
 			            	<td><?= $user['email']; ?></td>
 			            	<?php if( $user['level'] == 'admin' ) : ?>
 				            	<td width="80" align="center">
-				            		<a href="<?= base_url('administrator/user/hapus/'.$user['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
+				            		<a href="<?= base_url('administrator/user/hapus/'.$user['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Hapus</a>
 				            	</td>
 				            <?php endif; ?>
 			            </tr>

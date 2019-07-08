@@ -47,7 +47,7 @@
 			            	<td><?= $berita['hari_post'].', '.$berita['tgl_post']; ?></td>
 			            	<td width="150" align="center">
 			            		<a href="<?= base_url('administrator/berita/edit/'.$berita['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
-			            		<a href="<?= base_url('administrator/berita/hapus/'.$berita['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> hapus</a>
+			            		<a href="<?= base_url('administrator/berita/hapus/'.$berita['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Hapus</a>
 			            	</td>
 			            </tr>
 			        <?php endforeach; ?>

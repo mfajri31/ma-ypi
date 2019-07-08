@@ -6,30 +6,10 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/frontend/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/frontend/css/mystyle.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/frontend/css/magnific.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/all.min.css'); ?>">
 
     <link rel="shortcut icon" href="<?= base_url('assets/img/logo.png'); ?>">
-
-    <style>
-		img.gambar-slide {
-			max-height: 700px;
-		}
-
-		@media screen and (max-width: 768px){
-			img.gambar-slide {
-				height: 250px;
-			}
-		}
-
-		ul.eskul {
-			margin-left: -15px;
-		}
-
-		ul.eskul li {
-			padding-bottom: 15px;
-			color: #007bff;
-		}
-    </style>
 
     <title>MA YPI <?= @$title == '' ? '' : ' - '.$title; ?></title>
   </head>
@@ -40,15 +20,6 @@
 			<div class="row text-white">
 				<div class="col-md-12 pt-2 pb-0">
 					<marquee direction="left" scrollamount="10"><h4>Selamat Datang di Website MA YPI Martapura Kab. OKUT Sumatera Selatan</h4></marquee>
-
-				<!-- <div class="col-sm-6 p-2">
-					<i class="fa fa-map-marker-alt"></i> Kumpul Mulyo, Martapura, Kab. OKUT Sumatera Selatan
-				</div>
-				<div class="col-sm-6 p-2 text-md-right">
-					<i class="fa fa-envelope"></i> loremipsum@gmail.com
-					&nbsp;
-					<i class="fa fa-phone"></i> +0735400
-				</div> -->
 				</div>
 			</div>
 		</div>

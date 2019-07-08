@@ -22,7 +22,7 @@ class Profile_user extends CI_Controller {
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_message('required', '%s tidak boleh kosong');
-        $this->form_validation->set_error_delimiters('<small class="text-danger">','</small>');
+        $this->form_validation->set_error_delimiters('<small class="text-red">','</small>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Edit Profile';

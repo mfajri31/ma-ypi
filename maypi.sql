@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2019 at 01:20 PM
+-- Generation Time: Jul 08, 2019 at 10:37 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -32,7 +32,7 @@ CREATE TABLE `tb_berita` (
   `id` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `isi` text NOT NULL,
-  `penulis` varchar(50) NOT NULL,
+  `penulis` varchar(30) NOT NULL,
   `slug` varchar(100) NOT NULL,
   `foto` varchar(40) NOT NULL,
   `tgl_post` varchar(20) NOT NULL,
@@ -161,6 +161,13 @@ CREATE TABLE `tb_kontak` (
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tb_kontak`
+--
+
+INSERT INTO `tb_kontak` (`id`, `email`, `telp`, `alamat`) VALUES
+(1, 'maypimpa@gmail.com', '0735888', 'Kumpul Mulyo, Martapura, Kab. OKU Timur Sumatera Selatan');
+
 -- --------------------------------------------------------
 
 --
@@ -168,11 +175,19 @@ CREATE TABLE `tb_kontak` (
 --
 
 CREATE TABLE `tb_pengumuman` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `id` int(3) NOT NULL,
+  `judul` varchar(50) NOT NULL,
   `isi` text NOT NULL,
+  `slug` varchar(80) NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_pengumuman`
+--
+
+INSERT INTO `tb_pengumuman` (`id`, `judul`, `isi`, `slug`, `foto`) VALUES
+(5, 'Libur Semester', '<p>Libur mulai tanggal 31 Juni sampai 30 Juli</p>', 'libur-semester', 'none');
 
 -- --------------------------------------------------------
 
@@ -186,6 +201,13 @@ CREATE TABLE `tb_ppdb` (
   `isi` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_ppdb`
+--
+
+INSERT INTO `tb_ppdb` (`id`, `judul`, `isi`, `foto`) VALUES
+(1, 'Informasi Pendaftaran', '<p>Syarat Pendaftaran</p>', 'none');
 
 -- --------------------------------------------------------
 
@@ -358,7 +380,7 @@ CREATE TABLE `tb_visi_misi` (
 --
 
 INSERT INTO `tb_visi_misi` (`id`, `judul`, `isi`) VALUES
-(1, 'Visi dan Misi MA YPI', '<h3><strong><span style=\"font-size: 18pt;\">Visi </span></strong></h3>\r\n<p>Menjadikan lulusan yang berprestasi, beriman dan bertakwa kepada Tuhan Yang Maha Esa, menuju manusia yang berkualitas.</p>\r\n<h3><strong><span style=\"font-size: 18pt;\">Misi</span></strong></h3>\r\n<p>Mendidikan siswa yang terampil, kreatif, inovatif ahlaulkarimah, menumbuhkan jiwa kemandirian siswa dengan mempersiapkan wawasan sosial, ekonomi dan keterapilan hidup serta pemahaman agama yang kuat</p>');
+(1, 'Visi dan Misi MA YPI', '<h3 style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0.5rem; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-weight: 500; line-height: 1.2; color: #212529; font-size: 1.75rem; background-color: #ffffff;\"><span style=\"box-sizing: border-box; font-weight: bolder;\"><span style=\"box-sizing: border-box; font-size: 18pt;\">Visi</span></span></h3>\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-size: medium; font-weight: 400; background-color: #ffffff;\">Menjadikan lulusan yang berprestasi, beriman dan bertakwa kepada Tuhan Yang Maha Esa, menuju manusia yang berkualitas.</p>\r\n<h3 style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0.5rem; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-weight: 500; line-height: 1.2; color: #212529; font-size: 1.75rem; background-color: #ffffff;\"><span style=\"box-sizing: border-box; font-weight: bolder;\"><span style=\"box-sizing: border-box; font-size: 18pt;\">Misi</span></span></h3>\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: #212529; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-size: medium; font-weight: 400; background-color: #ffffff;\">Mendidikan siswa yang terampil, kreatif, inovatif ahlaulkarimah, menumbuhkan jiwa kemandirian siswa dengan mempersiapkan wawasan sosial, ekonomi dan keterapilan hidup serta pemahaman agama yang kuat</p>');
 
 --
 -- Indexes for dumped tables
@@ -480,7 +502,7 @@ ALTER TABLE `tb_berita`
 -- AUTO_INCREMENT for table `tb_ekstrakurikuler`
 --
 ALTER TABLE `tb_ekstrakurikuler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_galeri`
@@ -492,7 +514,7 @@ ALTER TABLE `tb_galeri`
 -- AUTO_INCREMENT for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tb_header`
@@ -504,25 +526,25 @@ ALTER TABLE `tb_header`
 -- AUTO_INCREMENT for table `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_pengumuman`
 --
 ALTER TABLE `tb_pengumuman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_ppdb`
 --
 ALTER TABLE `tb_ppdb`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_prestasi`
 --
 ALTER TABLE `tb_prestasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_program_unggulan`

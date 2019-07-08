@@ -76,6 +76,35 @@
 
     <script src="<?= base_url('assets/jquery/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('assets/frontend/js/bootstrap.min.js'); ?>"></script>
-    <link rel="stylesheet" href="<?= base_url('assets/fontawesome/js/all.min.js'); ?>">
+    <script src="<?= base_url('assets/frontend/js/magnific.js'); ?>"></script>
+    <script>
+        $(document).ready(function() {
+          $('.zoom-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+              verticalFit: true,
+              titleSrc: function(item) {
+                return item.el.attr('title');
+                // return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+              }
+            },
+            gallery: {
+              enabled: true
+            },
+            zoom: {
+              enabled: true,
+              duration: 300, // don't foget to change the duration also in CSS
+              opener: function(element) {
+                return element.find('img');
+              }
+            }
+            
+          });
+        });
+    </script>
   </body>
 </html>

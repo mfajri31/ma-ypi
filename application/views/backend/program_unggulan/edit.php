@@ -21,7 +21,7 @@
 						</div>
 						<div class="form-group">
 							<label>Keterangan</label>
-							<textarea name="keterangan" id="editor"><?= $program['keterangan']; ?></textarea>
+							<textarea name="keterangan" id="editor" class="form_control"><?= $program['keterangan']; ?></textarea>
 							<?= form_error('keterangan'); ?>
 						</div>
 						<div class="form-group">

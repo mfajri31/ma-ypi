@@ -21,7 +21,8 @@
 						</div>
 						<div class="form-group">
 							<label>Isi</label>
-							<textarea name="isi" id="editor"><?= $sambutan['isi']; ?></textarea>
+							<textarea name="isi" id="editor" class="form-control"><?= $sambutan['isi']; ?></textarea>
+							<?= form_error('isi'); ?>
 						</div>
 						<div class="form-group">
 							<label>Foto</label> <br>

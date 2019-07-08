@@ -24,7 +24,7 @@ class Prestasi_siswa extends CI_Controller {
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Tambah Prestasi';
@@ -40,7 +40,7 @@ class Prestasi_siswa extends CI_Controller {
 
 				redirect('administrator/prestasi_siswa');
 			} else {
-				$this->session->set_flashdata('error_foto', '<div class="text-danger">Foto tidak boleh kosong</div>');
+				$this->session->set_flashdata('error_foto', '<div class="text-red">Foto tidak boleh kosong</div>');
 				$data['title'] = 'Tambah Prestasi';
 				$this->template->backend('backend/siswa/prestasi_siswa/tambah', $data);
 			}
@@ -53,7 +53,7 @@ class Prestasi_siswa extends CI_Controller {
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title']    = 'Edit Prestasi';

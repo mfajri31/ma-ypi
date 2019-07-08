@@ -1,5 +1,5 @@
 <section class="content-header">
-	<h1>Manajemen Berita</h1>
+	<h1>Manajemen Pengumuman</h1>
 </section>
 
 <section class="content">
@@ -7,8 +7,8 @@
 		<div class="col-lg-12">
 			<div class="box">
 				<div class="box-header">
-					<h4 class="pull-left">Tambah Berita</h4>
-					<a href="<?= base_url('administrator/berita'); ?>" class="btn btn-success btn-sm pull-right" style="margin-bottom: 10px;">
+					<h4 class="pull-left">Tambah Pengumuman</h4>
+					<a href="<?= base_url('administrator/pengumuman'); ?>" class="btn btn-success btn-sm pull-right" style="margin-bottom: 10px;">
 						<i class="fa fa-chevron-left"></i> Kembali
 					</a>
 				</div>
@@ -25,13 +25,8 @@
 							<?= form_error('isi'); ?>
 						</div>
 						<div class="form-group">
-							<input type="hidden" name="penulis" class="form-control" value="<?= userLogin()['nama']; ?>" readonly>
-							<?= form_error('penulis'); ?>
-						</div>
-						<div class="form-group">
-							<label>Foto</label>
+							<label>Foto</label> <small>(opsional)</small>
 							<input type="file" name="foto" class="form-control" value="<?= set_value('foto'); ?>">
-							<?= $this->session->flashdata('error_foto'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
 							<i class="fa fa-plus"></i> Tambah

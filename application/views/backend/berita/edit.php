@@ -22,6 +22,7 @@
 						<div class="form-group">
 							<label>Isi</label>
 							<textarea name="isi" id="editor"><?= $berita['isi'] ?></textarea>
+							<?= form_error('isi'); ?>
 						</div>
 						<div class="form-group">
 							<label>Foto</label> <br>

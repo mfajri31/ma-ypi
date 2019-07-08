@@ -9,6 +9,7 @@
 						<h3><?= $berita['judul']; ?></h3>
 						<img src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" width="180" class="float-left mr-3 mt-2">
 						<div class="text-justify"><?= word_limiter($berita['isi'], 20); ?></div>
+
 						<a href="<?= base_url('berita/read/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary float-right mt-3">Baca Selengkapnya</a>
 					</li>
 				<?php endforeach; ?>

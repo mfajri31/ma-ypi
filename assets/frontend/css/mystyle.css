@@ -1,13 +1,35 @@
+/* warna bg topbar */
+.header-topbar {
+	background-color: #135238;
+}
+/**/
+
+
+/* ukuran gambar slide header di beranda */
+img.gambar-slide {
+	max-height: 700px;
+}
+/**/
+
+/* ukuran slide header saat agar responsive di device lain */
+@media screen and (max-width: 768px){
+	img.gambar-slide {
+		height: 250px;
+	}
+}
+/**/
+
+
+/* ukuran tinggi minimal kanvas konten */
 .konten {
 	min-height: 200px;
 }
+/**/
 
+
+/* style untuk navbar */
 a, a:hover {
 	text-decoration: none;
-}
-
-.header-topbar {
-	background-color: #135238;
 }
 
 .nav-link {
@@ -34,12 +56,83 @@ a, a:hover {
 	background-color: #28a745!important;
 	color: yellow!important;
 }
+/**/
 
+
+
+/* warna selang seling di halaman home */
 .bg-abu {
 	background-color: #eaeaea;
 }
+/**/
 
+/* style untuk 3 program unggulan dihome */
 .fa.service {
     font-size: 100px;
     color: #28a745;
 }
+/**/
+
+
+/* style list di halaman ekskul */
+ul.eskul {
+	margin-left: -15px;
+}
+
+ul.eskul li {
+	padding-bottom: 15px;
+	color: #007bff;
+}
+/**/
+
+
+/* membuat tombol bulat */
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+/**/
+
+
+/* menghilangkan tulisan bagikan di read berita saat di device ukuran <= 600px */
+@media screen and (max-width: 600px){
+	.bagikan {
+		display: none;
+	}
+}
+/**/
+
+
+/* style lightbox untuk foto dari https://dimsemenov.com/plugins/magnific-popup/ */
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+/**/

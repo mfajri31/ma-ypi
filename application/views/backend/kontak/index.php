@@ -1,5 +1,5 @@
 <section class="content-header">
-  <h1>Manajemen Profil</h1>
+  <h1>Manajemen Kontak</h1>
 </section>
 
 <section class="content">
@@ -10,27 +10,30 @@
 
    		<div class="box">
    			<div class="box-header">
-   				<h4 class="pull-left">Visi dan Misi</h4>
+   				<h4 class="pull-left">Kontak</h4>
    			</div>
 	        <div class="box-body">
         	  <div class="table-responsive">
 		          <table class="table table-bordered">
 		          	<thead>
 			            <tr>
-			              <th>Judul</th>
-			              <th>Isi</th>
+			              <th>Email</th>
+			              <th>Telp</th>
+			              <th>Alamat</th>
 			              <th>Aksi</th>
 			            </tr>
 		          	</thead>
 		            <tbody>
 		          	<?php 
-		          		foreach( $visi_misi as $visi_misi ) :
+		          		$no = 1;
+		          		foreach( $kontak as $kontak ) :
 		          	 ?>
 		            	<tr>
-			            	<td><?= $visi_misi['judul']; ?></td>
-			            	<td><?= word_limiter($visi_misi['isi'], 100); ?></td>
+		            		<td><?= $kontak['email']; ?></td>
+		            		<td><?= $kontak['telp']; ?></td>
+		            		<td><?= $kontak['alamat']; ?></td>
 			            	<td width="100" align="center">
-			            		<a href="<?= base_url('administrator/visi_misi/edit/'.$visi_misi['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+			            		<a href="<?= base_url('administrator/kontak/edit/'.$kontak['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
 			            	</td>
 			            </tr>
 			        <?php endforeach; ?>
@@ -41,6 +44,4 @@
       	</div>
     </div>
   </div>
- 
-
 </section>

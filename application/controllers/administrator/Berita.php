@@ -26,7 +26,7 @@ class Berita extends CI_Controller {
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 		$this->form_validation->set_message('is_unique', '%s tersebut telah ada');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Tambah Berita';
@@ -58,7 +58,7 @@ class Berita extends CI_Controller {
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 		$this->form_validation->set_message('is_unique', '%s tersebut telah ada');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title']  = 'Edit Berita';
@@ -67,6 +67,7 @@ class Berita extends CI_Controller {
 		} else {
 			$judul = $this->input->post('judul');
 			$isi   = $this->input->post('isi');
+			$slug  = url_title($judul, 'dash', TRUE);
 			$foto  = $_FILES['foto']['name'];
 
 			if( $foto ){
@@ -81,6 +82,7 @@ class Berita extends CI_Controller {
 
 			$this->db->set('judul', $judul);
 			$this->db->set('isi', $isi);
+			$this->db->set('slug', $slug);
 			$this->db->where('id', $id);
 			$this->db->update('tb_berita');
 
@@ -92,7 +94,7 @@ class Berita extends CI_Controller {
 
     public function hapus($id)
     {
-    	$berita = $this->Berita_m->tampil($id, null)->row_array();
+    	$berita = $this->Berita_m->tampil($id)->row_array();
     	$old_image = $berita['foto'];
 
     	unlink("assets/img/berita/".$old_image);

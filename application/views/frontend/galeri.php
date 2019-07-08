@@ -7,7 +7,11 @@
 				<?php foreach ($galeri as $galeri) : ?>
 				<div class="col-md-3 mb-3">
 					<div class="card">
-					  <img src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" class="card-img-top">
+						<div class="zoom-gallery">
+							<a href="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" title="Galeri MA YPI Martapura OKUT SUMSEL">
+							  <img src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" class="card-img-top">
+							</a>
+						</div>
 					</div>
 				</div>
 				<?php endforeach; ?>

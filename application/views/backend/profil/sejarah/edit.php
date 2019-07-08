@@ -21,7 +21,8 @@
 						</div>
 						<div class="form-group">
 							<label>Isi</label>
-							<textarea name="isi" id="editor"><?= $sejarah['isi']; ?></textarea>
+							<textarea name="isi" id="editor" class="form-control"><?= $sejarah['isi']; ?></textarea>
+							<?= form_error('isi'); ?>
 						</div>
 						<button type="submit" class="btn btn-success" style="margin-bottom: 15px;">
 							<i class="fa fa-download"></i> Simpan

@@ -107,7 +107,11 @@
       <?php foreach( $galeri as $galeri ) : ?>
       <div class="col-md-3 mb-3">
         <div class="card">
-          <img class="card-img-top" src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" alt="Card image cap">
+          <div class="zoom-gallery">
+            <a href="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>">
+              <img class="card-img-top" src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" alt="Card image cap">
+            </a>
+          </div>
         </div>
       </div>
       <?php endforeach; ?>

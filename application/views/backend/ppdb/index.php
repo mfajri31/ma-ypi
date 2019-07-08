@@ -5,7 +5,7 @@
 </style>
 
 <section class="content-header">
-  <h1>Manajemen Pengumuman</h1>
+  <h1>Manajemen PPDB</h1>
 </section>
 
 <section class="content">
@@ -16,10 +16,7 @@
 
    		<div class="box">
    			<div class="box-header">
-   				<h4 class="pull-left">Pengumuman</h4>
-		    	<a href="<?= base_url('administrator/pengumuman/tambah'); ?>" class="btn btn-success btn-sm pull-right">
-		    		<i class="fa fa-user-plus"></i> Tambah
-		    	</a>
+   				<h4 class="pull-left">PPDB</h4>
    			</div>
 	        <div class="box-body">
         	  <div class="table-responsive">
@@ -34,20 +31,23 @@
 		            <tbody>
 		          	<?php 
 		          		$no = 1;
-		          		foreach( $pengumuman as $pengumuman ) :
+		          		foreach( $ppdb as $ppdb ) :
 		          	 ?>
 		            	<tr>
 		            		<td width="100" align="center">
-		            			<?php if( $pengumuman['foto'] != 'none' ) : ?>
-			            			<img src="<?= base_url('assets/img/pengumuman/'.$pengumuman['foto']); ?>" width="80">
+		            			<?php if( $ppdb['foto'] != 'none' ) : ?>
+			            			<img src="<?= base_url('assets/img/ppdb/'.$ppdb['foto']); ?>" width="80">
 			            		<?php else : ?>
 			            			-
 			            		<?php endif; ?>
 		            		</td>
-		            		<td><?= $pengumuman['judul']; ?></td>
-			            	<td width="150" align="center">
-			            		<a href="<?= base_url('administrator/pengumuman/edit/'.$pengumuman['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
-			            		<a href="<?= base_url('administrator/pengumuman/hapus/'.$pengumuman['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Hapus</a>
+		            		<td><?= $ppdb['judul']; ?></td>
+			            	<td width="200" align="center">
+			            		<a href="<?= base_url('administrator/ppdb/edit/'.$ppdb['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+
+			            		<?php if( $ppdb['foto'] != 'none' ) : ?>
+				            		<a href="<?= base_url('administrator/ppdb/hapus_gambar/'.$ppdb['id']); ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i> Hapus Foto</a>
+				            	<?php endif; ?>
 			            	</td>
 			            </tr>
 			        <?php endforeach; ?>
@@ -58,6 +58,4 @@
       	</div>
     </div>
   </div>
- 
-
 </section>

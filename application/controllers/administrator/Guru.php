@@ -25,7 +25,7 @@ class Guru extends CI_Controller {
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Tambah Guru';
@@ -56,7 +56,7 @@ class Guru extends CI_Controller {
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 
-		$this->form_validation->set_error_delimiters('<div class="text-danger">','</div>');
+		$this->form_validation->set_error_delimiters('<div class="text-red">','</div>');
 
 		if( $this->form_validation->run() == FALSE ){
 			$data['title'] = 'Edit Guru';
