@@ -3,9 +3,10 @@
 		<h3 class="text-center mb-4">Pengumuman Terbaru</h3>
 
 		<ul class="list-group list-group-flush">
-		  <li class="list-group-item"><a href="#">Libur Lebaran</a></li>
-		  <li class="list-group-item"><a href="#">Libur Semester</a></li>
-		  <p class="text-center mt-3"><a href="">Lihat Semua</a></p>
+		  <?php foreach( $pengumuman as $pengumuman ) : ?>
+			  <li class="list-group-item"><a href="<?= base_url('pengumuman/read/'.$pengumuman['id']."/".$pengumuman['judul']); ?>"><?= $pengumuman['judul']; ?></a></li>
+		  <?php endforeach; ?>
+		  <p class="text-center mt-3"><a href="<?= base_url('pengumuman'); ?>">Lihat Semua</a></p>
 		</ul>
 	</div>
 </div>

@@ -6,6 +6,10 @@ function sidebar()
 
 	$ci->load->model('Berita_m');
 
+	$ci->db->order_by('id', 'DESC');
+	$ci->db->limit(4);
+	$data['pengumuman'] = $ci->db->get('tb_pengumuman')->result_array();
+
 	$data['berita'] = $ci->Berita_m->tampil()->result_array();
 	$ci->load->view('template_frontend/sidebar', $data);
 }

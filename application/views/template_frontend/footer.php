@@ -6,8 +6,8 @@
 
       <div class="row py-4 d-flex align-items-center">
 
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-3">
-          <h5 class="mb-0">SOSIAL MEDIA</h5>
+        <div class="col-md-6 col-lg-5 text-center text-md-left">
+          <h5 class="mb-0 sosmed">SOSIAL MEDIA</h5>
         </div>
 
         <div class="col-md-6 col-lg-7 text-center text-md-right">
@@ -104,7 +104,55 @@
             }
             
           });
-        });
+
+          tampil_data_guru();
+      });
+
+
+      function tampil_data_guru(){
+        $.ajax({
+          url: 'guru/tampil_guru',
+          type: 'post',
+          dataType: 'json',
+          success: function(guru){
+            var tampil = '';
+            for( var i=0; i<guru.length; i++ ){
+              tampil += `
+                <div class="col-md-4">
+                  <div class="card mt-4">
+                    <div class="zoom-gallery">
+                      <img class="card-img-top guru" src="assets/img/guru/`+guru[i].foto+`" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title text-center"><a href="" onclick="info(`+guru[i].id+`)" data-toggle="modal" data-target="#modal-guru">`+guru[i].nama+`</a></h6>
+                    </div>
+                  </div>
+                </div>
+              `
+            }
+            $('#data-guru').html(tampil);
+          }
+        })
+      }
+
+
+      function info(id)
+      {
+        $.ajax({
+          url: 'guru/tampil_guru_perId',
+          type: 'post',
+          data: 'id='+id,
+          dataType: 'json',
+          success: function(guru){
+
+            $('#foto').attr('src', 'assets/img/guru/'+guru.foto);
+            $('#nama').html(guru.nama);
+            $('#jabatan').html(guru.jabatan);
+            $('#mapel').html(guru.mapel);
+            $('#jum_jam').html(guru.jum_jam+" Jam");
+          }
+        })
+      }
     </script>
   </body>
 </html>

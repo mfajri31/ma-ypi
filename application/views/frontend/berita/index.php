@@ -1,6 +1,6 @@
 <div class="container konten my-3">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-12">
 			<h1 class="ml-4">Daftar Berita</h1>
 
 			<ul class="list-group list-group-flush">
@@ -15,12 +15,5 @@
 				<?php endforeach; ?>
 			</ul>
 		</div>
-
-		<!-- sidebar -->
-		<div class="col-md-4 mt-4">
-			<?php sidebar(); ?>
-		</div>
-		<!-- /sidebar -->
-
 	</div>
 </div>

@@ -137,9 +137,9 @@
       <?php foreach($berita as $berita) : ?>
       <div class="col-md-3 mb-3">
         <div class="card">
-          <img class="card-img-top" src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" alt="Card image cap">
+          <img class="card-img-top berita" src="<?= base_url('assets/img/berita/'.$berita['foto']); ?>" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><?= $berita['judul'] ?></h5>
+            <h5 class="card-title"><?= word_limiter($berita['judul'], 8) ?></h5>
             <p class="card-text"><?= word_limiter($berita['isi'], 8); ?></p>
             <a href="<?= base_url('berita/read/'.$berita['id'].'/'.$berita['slug']); ?>" class="btn btn-primary btn-block">Baca Selengkapnya</a>
           </div>

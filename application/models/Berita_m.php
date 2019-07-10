@@ -16,6 +16,12 @@ class Berita_m extends CI_Model {
 		return $query;
 	}
 
+	public function tampil_full()
+	{
+		$this->db->order_by('id', 'DESC');
+		return $query = $this->db->get('tb_berita');
+	}
+
 	public function tambah($slug, $foto)
 	{
 		$data = [

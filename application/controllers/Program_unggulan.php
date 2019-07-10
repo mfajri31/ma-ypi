@@ -10,7 +10,10 @@ class Program_unggulan extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Program Unggulan';
+		$this->load->model('Program_m');
+
+		$data['title']   = 'Program Unggulan';
+		$data['program'] = $this->Program_m->tampil()->row_array();
 		$this->template->frontend('frontend/program_unggulan', $data);
 	}
 }

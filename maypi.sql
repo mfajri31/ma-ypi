@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2019 at 10:37 PM
+-- Generation Time: Jul 10, 2019 at 03:36 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -57,7 +57,7 @@ INSERT INTO `tb_berita` (`id`, `judul`, `isi`, `penulis`, `slug`, `foto`, `tgl_p
 --
 
 CREATE TABLE `tb_ekstrakurikuler` (
-  `id` int(11) NOT NULL,
+  `id` int(2) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `keterangan` text NOT NULL,
   `foto` varchar(40) NOT NULL
@@ -109,11 +109,11 @@ INSERT INTO `tb_galeri` (`id`, `foto`) VALUES
 --
 
 CREATE TABLE `tb_guru` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `jabatan` varchar(50) NOT NULL,
-  `mapel` varchar(50) NOT NULL,
-  `jum_jam` int(3) NOT NULL,
+  `id` int(3) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `jabatan` varchar(30) NOT NULL,
+  `mapel` varchar(30) NOT NULL,
+  `jum_jam` int(2) NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -126,7 +126,16 @@ INSERT INTO `tb_guru` (`id`, `nama`, `jabatan`, `mapel`, `jum_jam`, `foto`) VALU
 (2, 'Heri Yanto, S.Pd', 'Waka Kurikulum', 'Bahasa Inggris', 12, '7cfedb1929b075457b263336b998254a.png'),
 (4, 'Muhammad Ansori, S.Pd', 'Waka Kesiswaan', 'Bahasa Indonesia', 12, '10eada2a9f7e89d13c056644dd5b2f1a.png'),
 (5, 'Isrohlaini, S.P.d.I', 'Bendahara', 'Bahasa Arab', 6, '84248d1e072150907f9385bd01d8b805.png'),
-(6, 'Kencana Wati, S.Pd', 'Guru Wali Kelas XII', 'Matematika', 12, 'cf8e2a831045b9b73c8396dd4dc9d482.jpg');
+(6, 'Kencana Wati, S.Pd', 'Guru Wali Kelas XII', 'Matematika', 12, 'cf8e2a831045b9b73c8396dd4dc9d482.jpg'),
+(7, 'Novie Haryanti, S.Pd', 'Guru Wali Kelas XI', 'Matematika', 12, 'fb2c53fdf7220837b52d223dc9d71dce.png'),
+(8, 'Sugiarti, S.Pd', 'Guru Wali Kelas X', 'Ekonomi', 10, '32ae7e70cf42d36bab9cdc8bc1b109cd.png'),
+(9, 'Mukhsin, S.Ag', 'Guru', 'Alquran Hadis', 6, '9633f58199b563bc3393f6e372195ae1.png'),
+(10, 'Rinasih, S. Hum.', 'Guru', 'Sosiologi', 8, '1bea3674db96f853194e3100bff160b9.png'),
+(11, 'Lenny Oktaria, S.Pd', 'Guru', 'SBK, Fisika, Kimia', 6, '9dbd11ec362f511a36d3de9f1b540c5c.png'),
+(12, 'Ulan Fitriani', 'Guru', 'Sejarah', 8, '4d7f38a0da092e0cb8fe152a07d3fa4e.png'),
+(13, 'Sopiyan Nugraha, S.Pd', 'Guru', 'Fiqih', 6, '033bb58b748c720895c6a589e23765ae.png'),
+(14, 'Wiji Astuti, S.Pd', 'Guru', 'SKI', 6, 'e7c3fcde9485b1615fcbe9c639fb0408.png'),
+(15, 'Novie Haryanti, S.Pd', 'Guru', 'Geografi', 10, 'c812b23e9e8e9d5c993f9f9a6a11fd72.png');
 
 -- --------------------------------------------------------
 
@@ -156,7 +165,7 @@ INSERT INTO `tb_header` (`id`, `slide`) VALUES
 
 CREATE TABLE `tb_kontak` (
   `id` int(1) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `telp` varchar(14) NOT NULL,
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -178,7 +187,7 @@ CREATE TABLE `tb_pengumuman` (
   `id` int(3) NOT NULL,
   `judul` varchar(50) NOT NULL,
   `isi` text NOT NULL,
-  `slug` varchar(80) NOT NULL,
+  `slug` varchar(50) NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -187,7 +196,8 @@ CREATE TABLE `tb_pengumuman` (
 --
 
 INSERT INTO `tb_pengumuman` (`id`, `judul`, `isi`, `slug`, `foto`) VALUES
-(5, 'Libur Semester', '<p>Libur mulai tanggal 31 Juni sampai 30 Juli</p>', 'libur-semester', 'none');
+(12, 'Libur Semester Genap Tahun Ajaran 2019/2020', '<p style=\"text-align: justify;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut officia ipsam nihil quisquam voluptas culpa quaerat praesentium totam perferendis obcaecati nisi unde deserunt nesciunt labore dicta, enim repudiandae minus suscipit dolore, vitae assumenda fugiat harum itaque cum dignissimos. In unde saepe laborum illo repellat adipisci, iste, amet totam. Tenetur officia maxime optio reiciendis harum, quis ipsa eos quam, dolores! Explicabo, nemo, labore? Soluta et, ipsa fugit tempora, culpa voluptatem atque labore eligendi voluptas alias repellendus id minus blanditiis nostrum omnis quaerat. Excepturi assumenda, alias minima officiis, non nam doloremque necessitatibus quas deleniti ipsa ipsum, dolor libero voluptas numquam placeat, eum?</p>', 'libur-semester-genap-tahun-ajaran-20192020', 'none'),
+(15, 'Libur Lebaran 1440 Hijriah 2019', '<p style=\"text-align: justify;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa fuga voluptatibus aspernatur optio tenetur ad ducimus voluptas architecto eum provident voluptates nesciunt odio expedita laboriosam id obcaecati, veniam illo quis quasi, deserunt totam. Atque molestias autem repellendus magni cupiditate earum veritatis illum sint incidunt quaerat, voluptatem ratione sed a unde maxime animi voluptates laudantium, provident voluptate suscipit enim, ex excepturi. Minus possimus neque, quo in reiciendis quas dolorem voluptatum harum nobis. Ipsam quaerat ipsa accusamus ea, libero vero. Eveniet, cum.</p>', 'libur-lebaran-1440-hijriah-2019', 'none');
 
 -- --------------------------------------------------------
 
@@ -197,7 +207,7 @@ INSERT INTO `tb_pengumuman` (`id`, `judul`, `isi`, `slug`, `foto`) VALUES
 
 CREATE TABLE `tb_ppdb` (
   `id` int(1) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(50) NOT NULL,
   `isi` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -207,7 +217,7 @@ CREATE TABLE `tb_ppdb` (
 --
 
 INSERT INTO `tb_ppdb` (`id`, `judul`, `isi`, `foto`) VALUES
-(1, 'Informasi Pendaftaran', '<p>Syarat Pendaftaran</p>', 'none');
+(1, 'Informasi Penerimaan Peserta Didik Baru', '<p><strong>Persyaratan Pendaftaran :</strong></p>\r\n<p>1. Mengisi Formulir Pendaftaran</p>\r\n<p>2. Menyerahkan Photo Copy Izajah Terakhir yang telah dilegalisir sebanyak 2 lembar</p>\r\n<p>3. Menyerahkan Photo Copy SKHU Terakhir yang telah dilegalisir sebanyak 2 lembar</p>\r\n<p>4. Menyerahkan Pas Photo Hitam Putih ukuran 3x4 dan 2x3 masing - masing&nbsp; 5 lembar</p>\r\n<p>5. Menyerahkan Stop Maf sebanyak 1 lembar</p>\r\n<p>&nbsp; &nbsp; Keterangan :</p>\r\n<p>&nbsp; &nbsp; &gt; Laki - laki Warna Hijau</p>\r\n<p>&nbsp; &nbsp; &gt; Perempuan Warna Kuning</p>\r\n<p>&nbsp;</p>\r\n<p><strong>UNTUK 25 PENDAFTAR PERTAMA AKAN MENDAPATKAN :</strong></p>\r\n<p><strong>1. Perlengkapan Sekolah (Buku dan Alat Tulis)</strong></p>\r\n<p><strong>2. Baju Seragam Batik</strong></p>\r\n<p><strong>3. Baju Kaos Olahraga</strong></p>\r\n<p>&nbsp;</p>\r\n<p>Waktu Pendaftaran&nbsp;</p>\r\n<p>April s.d Agustus 2019</p>\r\n<p>Di MA YPI Martapura&nbsp;</p>\r\n<p>Alamat : Kumpul Mulyo Desa Perjaya Barat Kec. Martapura Kab. OKU Timur.</p>\r\n<p>&nbsp;</p>\r\n<p>Contact Person :</p>\r\n<p>&gt; Syamsul Arifin : 0853-1164-3394</p>\r\n<p>&gt; Heryanto, S.Pd : 0823-7389-1329</p>\r\n<p>&gt; Muhammad Ansori : 0858-4089-7299</p>\r\n<p>&gt; Kencana Wati, S.Pd : 0852-6722-9363</p>\r\n<p>&nbsp;</p>', 'none');
 
 -- --------------------------------------------------------
 
@@ -217,7 +227,7 @@ INSERT INTO `tb_ppdb` (`id`, `judul`, `isi`, `foto`) VALUES
 
 CREATE TABLE `tb_prestasi` (
   `id` int(11) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `keterangan` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -227,7 +237,9 @@ CREATE TABLE `tb_prestasi` (
 --
 
 INSERT INTO `tb_prestasi` (`id`, `judul`, `keterangan`, `foto`) VALUES
-(1, 'Juara 1 Umum', 'Tingkat Provinsi', '46b3febf0f05fe8353ca6bbabc15f45d.jpg');
+(1, 'Juara', '', '46b3febf0f05fe8353ca6bbabc15f45d.jpg'),
+(6, 'Juara', '', '2d8e82d73ef814e3b0ecc12f488c2673.jpg'),
+(7, 'Juara', '', '6306aa028585457c47f269af2359fa6f.jpg');
 
 -- --------------------------------------------------------
 
@@ -237,7 +249,7 @@ INSERT INTO `tb_prestasi` (`id`, `judul`, `keterangan`, `foto`) VALUES
 
 CREATE TABLE `tb_program_unggulan` (
   `id` int(1) NOT NULL,
-  `judul` varchar(50) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `keterangan` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -247,7 +259,7 @@ CREATE TABLE `tb_program_unggulan` (
 --
 
 INSERT INTO `tb_program_unggulan` (`id`, `judul`, `keterangan`, `foto`) VALUES
-(1, 'Program Unggulan', '<p>Program unggulan kami adalah</p>', 'ccc702b1e9939e604065de7179f25b7d.png');
+(1, 'Program Unggulan', '<p>Berikut ini adalah program unggulan yang kami :</p>\r\n<p>1. Tahfidz Al-Qur\'an</p>\r\n<p>2. Kahataman Al-Qur\'an</p>\r\n<p>3. Tertib Tadarus Al-Qur\'an</p>\r\n<p>4. Tertib Sholat DZuhur Berjamaah</p>\r\n<p>5. Tertib Sholat Duha Berjamaah</p>\r\n<p>6. Diriwayatkan bagi yang mampu untuk ziarah ke makam wali songo</p>', 'ccc702b1e9939e604065de7179f25b7d.png');
 
 -- --------------------------------------------------------
 
@@ -257,7 +269,7 @@ INSERT INTO `tb_program_unggulan` (`id`, `judul`, `keterangan`, `foto`) VALUES
 
 CREATE TABLE `tb_sambutan` (
   `id` int(1) NOT NULL,
-  `judul` varchar(50) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `isi` text NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -277,7 +289,7 @@ INSERT INTO `tb_sambutan` (`id`, `judul`, `isi`, `foto`) VALUES
 
 CREATE TABLE `tb_sarana` (
   `id` int(1) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -296,7 +308,7 @@ INSERT INTO `tb_sarana` (`id`, `judul`, `isi`) VALUES
 
 CREATE TABLE `tb_sejarah` (
   `id` int(1) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -315,7 +327,7 @@ INSERT INTO `tb_sejarah` (`id`, `judul`, `isi`) VALUES
 
 CREATE TABLE `tb_struktur` (
   `id` int(1) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `foto` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -333,10 +345,10 @@ INSERT INTO `tb_struktur` (`id`, `judul`, `foto`) VALUES
 --
 
 CREATE TABLE `tb_token` (
-  `id` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `id` int(3) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `token` varchar(32) NOT NULL,
-  `date_created` int(11) NOT NULL
+  `date_created` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -347,8 +359,8 @@ CREATE TABLE `tb_token` (
 
 CREATE TABLE `tb_user` (
   `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `password` varchar(60) NOT NULL,
   `level` varchar(10) NOT NULL,
   `status` int(1) NOT NULL,
@@ -371,7 +383,7 @@ INSERT INTO `tb_user` (`id`, `nama`, `email`, `password`, `level`, `status`, `fo
 
 CREATE TABLE `tb_visi_misi` (
   `id` int(1) NOT NULL,
-  `judul` varchar(80) NOT NULL,
+  `judul` varchar(30) NOT NULL,
   `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -502,7 +514,7 @@ ALTER TABLE `tb_berita`
 -- AUTO_INCREMENT for table `tb_ekstrakurikuler`
 --
 ALTER TABLE `tb_ekstrakurikuler`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_galeri`
@@ -514,7 +526,7 @@ ALTER TABLE `tb_galeri`
 -- AUTO_INCREMENT for table `tb_guru`
 --
 ALTER TABLE `tb_guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tb_header`
@@ -532,7 +544,7 @@ ALTER TABLE `tb_kontak`
 -- AUTO_INCREMENT for table `tb_pengumuman`
 --
 ALTER TABLE `tb_pengumuman`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tb_ppdb`
@@ -544,7 +556,7 @@ ALTER TABLE `tb_ppdb`
 -- AUTO_INCREMENT for table `tb_prestasi`
 --
 ALTER TABLE `tb_prestasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_program_unggulan`
@@ -580,7 +592,7 @@ ALTER TABLE `tb_struktur`
 -- AUTO_INCREMENT for table `tb_token`
 --
 ALTER TABLE `tb_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_user`

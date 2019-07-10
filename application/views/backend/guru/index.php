@@ -26,6 +26,7 @@
 		          <table class="table table-bordered">
 		          	<thead>
 			            <tr>
+			              <th>No.</th>
 			              <th>Foto</th>
 			              <th>Nama</th>
 			              <th>Jabatan</th>
@@ -35,8 +36,9 @@
 			            </tr>
 		          	</thead>
 		            <tbody>
-		          	<?php foreach( $guru as $guru ) : ?>
+		          	<?php $no=1; foreach( $guru as $guru ) : ?>
 		            	<tr>
+		            		<td align="center"><?= $no++; ?></td>
 			            	<td><img src="<?= base_url('assets/img/guru/'.$guru['foto']); ?>" width="60"></td>
 			            	<td><?= $guru['nama']; ?></td>
 			            	<td><?= $guru['jabatan']; ?></td>

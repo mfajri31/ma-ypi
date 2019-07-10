@@ -14,7 +14,7 @@ class Berita extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Berita';
-		$data['berita'] = $this->Berita_m->tampil()->result_array();
+		$data['berita'] = $this->Berita_m->tampil_full()->result_array();
 		$this->template->backend('backend/berita/index', $data);
 	}
 

@@ -36,7 +36,7 @@
 		            	<tr>
 		            		<td><img src="<?= base_url('assets/img/program/'.$program['foto']); ?>" width="60"></td>
 			            	<td><?= $program['judul']; ?></td>
-			            	<td><?= word_limiter($program['keterangan'], 30); ?></td>
+			            	<td><?= word_limiter($program['keterangan'], 10); ?></td>
 			            	<td width="100" align="center">
 			            		<a href="<?= base_url('administrator/program_unggulan/edit/'.$program['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
 			            	</td>

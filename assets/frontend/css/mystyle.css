@@ -1,35 +1,28 @@
-/* warna bg topbar */
+a, a:hover {
+	text-decoration: none;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
 .header-topbar {
 	background-color: #135238;
 }
-/**/
 
 
-/* ukuran gambar slide header di beranda */
 img.gambar-slide {
 	max-height: 700px;
 }
-/**/
 
-/* ukuran slide header saat agar responsive di device lain */
-@media screen and (max-width: 768px){
-	img.gambar-slide {
-		height: 250px;
-	}
-}
-/**/
-
-
-/* ukuran tinggi minimal kanvas konten */
 .konten {
-	min-height: 200px;
-}
-/**/
-
-
-/* style untuk navbar */
-a, a:hover {
-	text-decoration: none;
+	min-height: 500px;
 }
 
 .nav-link {
@@ -56,13 +49,12 @@ a, a:hover {
 	background-color: #28a745!important;
 	color: yellow!important;
 }
-/**/
-
 
 
 /* warna selang seling di halaman home */
 .bg-abu {
 	background-color: #eaeaea;
+	border-radius: 8px;
 }
 /**/
 
@@ -73,8 +65,6 @@ a, a:hover {
 }
 /**/
 
-
-/* style list di halaman ekskul */
 ul.eskul {
 	margin-left: -15px;
 }
@@ -83,29 +73,69 @@ ul.eskul li {
 	padding-bottom: 15px;
 	color: #007bff;
 }
-/**/
 
-
-/* membuat tombol bulat */
-.btn-circle {
-    width: 30px;
-    height: 30px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
+.guru {
+	height:250px;
 }
-/**/
 
+.pengumuman p, span {
+	color: grey;
+	font-weight: 100;
+}
 
-/* menghilangkan tulisan bagikan di read berita saat di device ukuran <= 600px */
-@media screen and (max-width: 600px){
+.berita {
+	height: 200px;
+}
+
+/* responsive */
+@media screen and (max-width: 480px){
 	.bagikan {
 		display: none;
 	}
+
+	.guru {
+		height: 100%;
+	}
+
+	.map {
+		width: 340px;
+		margin-top: 20px;
+	}
+
+	.sosmed {
+		padding-bottom: 20px;
+	}
+
+	#nama {
+		text-align: center;
+	}
+
+@media screen and (max-width: 768px){
+	img.gambar-slide {
+		height: 250px;
+	}
+
+	.map {
+		width: 100px;
+		margin-top: 20px;
+	}
+
+	.berita {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.map {
+		width: 300px;
+		margin-top: 20px;
+	}
 }
 /**/
+
+
+
+
 
 
 /* style lightbox untuk foto dari https://dimsemenov.com/plugins/magnific-popup/ */

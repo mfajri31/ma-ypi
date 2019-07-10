@@ -10,7 +10,10 @@ class Ppdb extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->model('Ppdb_m');
+
 		$data['title'] = 'PPDB';
+		$data['ppdb']  = $this->Ppdb_m->tampil()->row_array();
 		$this->template->frontend('frontend/ppdb', $data);
 	}
 }
