@@ -7,13 +7,13 @@
 					<small class="text-secondary"><i class="far fa-clock"></i>
 						<?= $berita['hari_post'].', '.$berita['tgl_post'].' - '.$berita['jam_post']; ?>
 					</small>
-					<a href="http://www.facebook.com/sharer.php?u=http://aplikasiku.ga/berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-primary btn-circle btn-sm float-right ml-2">
+					<a href="http://www.facebook.com/sharer.php?u=<?= base_url() ?>berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-primary btn-circle btn-sm float-right ml-2">
 						<i class="fab fa-facebook-f"></i>
 				    </a>
-				    <a href="https://twitter.com/share?url=http://aplikasiku.ga/berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-primary btn-circle btn-sm float-right ml-2">
+				    <a href="https://twitter.com/share?url=<?= base_url() ?>berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-primary btn-circle btn-sm float-right ml-2">
 				     	<i class="fab fa-twitter"></i>
 				    </a>
-				    <a href="whatsapp://send?text=http://aplikasiku.ga/berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-success btn-circle btn-sm float-right lm-2">
+				    <a href="whatsapp://send?text=<?= base_url() ?>berita/read/<?= $berita['id']."/".$berita['slug']; ?>" target="_blank" class="btn btn-success btn-circle btn-sm float-right lm-2">
 				     	<i class="fab fa-whatsapp"></i>
 				    </a>
 
