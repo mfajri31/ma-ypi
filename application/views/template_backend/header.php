@@ -18,8 +18,6 @@
       width: 50px;
       height: 50px;
       max-width: 50px;
-      /*margin-left: -6px;*/
-      /*margin-top: -5px;*/
     }
   </style>
 
@@ -100,6 +98,7 @@
       <li class="<?= active_menu('') || active_menu('dashboard'); ?>">
         <a href="<?= base_url('administrator'); ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
       </li>
+
       <li class="treeview <?= active_menu('header') || active_menu('sambutan'); ?>">
         <a href="">
           <i class="fa fa-home"></i> <span>Manajemen Beranda</span>
@@ -116,7 +115,8 @@
           </li>
         </ul>
       </li>
-      <li class="treeview <?= active_menu('sejarah') || active_menu('visi_misi') || active_menu('sarana_prasarana') || active_menu('struktur_organisasi'); ?>">
+
+      <li class="treeview <?= active_menu('sejarah') || active_menu('visi_misi') || active_menu('struktur_organisasi'); ?>">
         <a href="">
           <i class="fa fa-user"></i> <span>Manajemen Profil</span>
           <span class="pull-right-container">
@@ -130,18 +130,19 @@
           <li class="<?= active_menu('visi_misi'); ?>">
             <a href="<?= base_url('administrator/visi_misi'); ?>"><i class="fa fa-circle-o"></i> Visi dan Misi</a>
           </li>
-          <li class="<?= active_menu('sarana_prasarana'); ?>">
-            <a href="<?= base_url('administrator/sarana_prasarana'); ?>"><i class="fa fa-circle-o"></i> Sarana dan Prasarana</a>
-          </li>
           <li class="<?= active_menu('struktur_organisasi'); ?>">
             <a href="<?= base_url('administrator/struktur_organisasi'); ?>"><i class="fa fa-circle-o"></i> Struktur Organisasi</a>
           </li>
         </ul>
       </li>
 
+      <li class="<?= active_menu('fasilitas'); ?>">
+          <a href="<?= base_url('administrator/fasilitas'); ?>"><i class="fa fa-cubes"></i> <span>Manajemen Fasilitas</span></a>
+      </li>
+
       <li class="treeview <?= active_menu('prestasi_siswa') || active_menu('ekstrakurikuler'); ?>">
         <a href="">
-          <i class="fa fa-home"></i> <span>Manajemen Siswa</span>
+          <i class="fa fa-users"></i> <span>Manajemen Siswa</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>

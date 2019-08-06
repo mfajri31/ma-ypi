@@ -15,11 +15,10 @@ class Auth extends CI_Controller {
 	{
 		cekLogout();
 
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
-		$this->form_validation->set_message('valid_email', 'Format %s salah');
 
 		$this->form_validation->set_error_delimiters('<small class="text-red">','</small>');
 
@@ -120,11 +119,11 @@ class Auth extends CI_Controller {
 
 	public function lupa_password()
 	{
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		$this->form_validation->set_rules('email', 'Email', 'required');
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
 
-		$this->form_validation->set_message('valid_email', 'Format %s salah');
+		// $this->form_validation->set_message('valid_email', 'Format %s salah');
 
 		$this->form_validation->set_error_delimiters('<small class="text-red">','</small>');
 

@@ -4,7 +4,7 @@
 
 		<ul class="list-group list-group-flush">
 		  <?php foreach( $pengumuman as $pengumuman ) : ?>
-			  <li class="list-group-item"><a href="<?= base_url('pengumuman/read/'.$pengumuman['id']."/".$pengumuman['judul']); ?>"><?= $pengumuman['judul']; ?></a></li>
+			  <li class="list-group-item"><a href="<?= base_url('pengumuman/read/'.$pengumuman['id']."/".$pengumuman['slug']); ?>"><?= $pengumuman['judul']; ?></a></li>
 		  <?php endforeach; ?>
 		  <p class="text-center mt-3"><a href="<?= base_url('pengumuman'); ?>">Lihat Semua</a></p>
 		</ul>

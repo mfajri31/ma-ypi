@@ -23,12 +23,12 @@ class User extends CI_Controller {
 	public function tambah()
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[tb_user.email]');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|is_unique[tb_user.email]');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
 		$this->form_validation->set_rules('passconf', 'Konfirmasi Password', 'trim|required|matches[password]');
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
-		$this->form_validation->set_message('valid_email', 'Format %s tidak sesuai');
+		// $this->form_validation->set_message('valid_email', 'Format %s tidak sesuai');
 		$this->form_validation->set_message('is_unique', '%s tersebut telah digunakan');
 		$this->form_validation->set_message('min_length', '%s minimal 8 karakter');
 		$this->form_validation->set_message('matches', '%s tidak sesuai dengan password');

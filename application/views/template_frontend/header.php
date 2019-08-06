@@ -40,14 +40,16 @@
 		        <a class="nav-link <?= active('') || active('home'); ?>" href="<?= base_url(); ?>">BERANDA</a>
 		      </li>
 		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle <?= active('sejarah') || active('visi_misi') || active('sarana_prasarana') || active('struktur_organisasi'); ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        <a class="nav-link dropdown-toggle <?= active('sejarah') || active('visi_misi') || active('struktur_organisasi'); ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          PROFIL
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		          <a class="dropdown-item" href="<?= base_url('sejarah'); ?>">SEJARAH</a>
 		          <a class="dropdown-item" href="<?= base_url('visi_misi'); ?>">VISI DAN MISI</a>
-		          <a class="dropdown-item" href="<?= base_url('sarana_prasarana'); ?>">SARANA DAN PRASARANA</a>
 		          <a class="dropdown-item" href="<?= base_url('struktur_organisasi') ?>">STRUKTUR ORGANISASI</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link <?= active('fasilitas'); ?>" href="<?= base_url('fasilitas'); ?>">FASILITAS</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle <?= active('prestasi_siswa') || active('ekstrakurikuler') ?>" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -38,7 +38,7 @@
 
             <form action="<?= base_url('auth'); ?>" method="post" id="form-login">
                 <div class="form-group has-feedback">
-                    <input type="text" name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
+                    <input type="email" name="email" class="form-control" placeholder="Email" value="<?= set_value('email'); ?>">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     <?= form_error('email'); ?>
                 </div>

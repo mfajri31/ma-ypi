@@ -113,10 +113,10 @@ class Profile_user extends CI_Controller {
 			redirect('administrator/profile_user/cek_password');
 		}
 
-		$this->form_validation->set_rules('email','Email', 'trim|required|valid_email|is_unique[tb_user.email]');
+		$this->form_validation->set_rules('email','Email', 'trim|required|is_unique[tb_user.email]');
         
         $this->form_validation->set_message('required','%s tidak boleh kosong');
-        $this->form_validation->set_message('valid_email','Format %s salah');
+        // $this->form_validation->set_message('valid_email','Format %s salah');
         $this->form_validation->set_message('is_unique','%s tersebut telah digunakan');
 
         $this->form_validation->set_error_delimiters('<small class="text-red">', '</small>');

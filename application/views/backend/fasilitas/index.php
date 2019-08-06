@@ -10,13 +10,14 @@
 
    		<div class="box">
    			<div class="box-header">
-   				<h4 class="pull-left">Sarana dan Prasarana</h4>
+   				<h4 class="pull-left">Fasilitas</h4>
    			</div>
 	        <div class="box-body">
         	  <div class="table-responsive">
 		          <table class="table table-bordered">
 		          	<thead>
 			            <tr>
+			              <th>Foto</th>
 			              <th>Judul</th>
 			              <th>Isi</th>
 			              <th>Aksi</th>
@@ -24,13 +25,14 @@
 		          	</thead>
 		            <tbody>
 		          	<?php 
-		          		foreach( $sarana as $sarana ) :
+		          		foreach( $fasilitas as $fasilitas ) :
 		          	 ?>
 		            	<tr>
-			            	<td><?= $sarana['judul']; ?></td>
-			            	<td><?= word_limiter($sarana['isi'], 30); ?></td>
+			            	<td><img src="<?= base_url('assets/img/fasilitas/'.$fasilitas['foto']); ?>" width="100"></td>
+			            	<td><?= $fasilitas['judul']; ?></td>
+			            	<td><?= word_limiter($fasilitas['isi'], 30); ?></td>
 			            	<td width="100" align="center">
-			            		<a href="<?= base_url('administrator/sarana_prasarana/edit/'.$sarana['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+			            		<a href="<?= base_url('administrator/fasilitas/edit/'.$fasilitas['id']); ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Edit</a>
 			            	</td>
 			            </tr>
 			        <?php endforeach; ?>

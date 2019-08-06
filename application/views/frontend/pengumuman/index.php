@@ -5,7 +5,7 @@
 
 			<?php foreach( $pengumuman as $pengumuman ) : ?>
 				<h5>
-					<a href=""><?= $pengumuman['judul']; ?></a>
+					<a href="<?= base_url('pengumuman/read/'.$pengumuman['id']."/".$pengumuman['slug']); ?>"><?= $pengumuman['judul']; ?></a>
 				</h5>
 				<div class="pengumuman">
 					<?= word_limiter($pengumuman['isi'], 20) ?>

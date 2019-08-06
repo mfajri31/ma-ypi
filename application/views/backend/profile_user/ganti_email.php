@@ -12,7 +12,7 @@
               <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label>Masukkan Email Baru</label>
-                  <input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>">
+                  <input type="email" name="email" class="form-control" value="<?= set_value('email'); ?>">
                   <?= form_error('email'); ?>
                 </div>
                 <div class="pull-left">

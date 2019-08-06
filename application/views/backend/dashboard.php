@@ -3,7 +3,42 @@
 </section>
 
 <section class="content">
-  <div class="row">
+
+  <h1>Selamat Datang <?= userLogin()['nama']; ?></h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="row">
     <div class="col-lg-3 col-xs-6">
       <div class="small-box bg-aqua">
         <div class="inner">
@@ -57,5 +92,4 @@
         <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
-  </div>
-</section>
+  </div> -->

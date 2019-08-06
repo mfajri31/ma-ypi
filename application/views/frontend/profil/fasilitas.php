@@ -1,10 +1,10 @@
 <div class="container konten my-3">
 	<div class="row">
 		<div class="col-md-8">
-			<h1 class="mb-3"><?= $sarana['judul']; ?></h1>
+			<h1 class="mb-3"><?= $fasilitas['judul']; ?></h1>
 
 			<div>
-				<?= $sarana['isi']; ?>
+				<?= $fasilitas['isi']; ?>
 			</div>
 		</div>
 
