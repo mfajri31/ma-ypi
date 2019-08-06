@@ -31,13 +31,13 @@
   <div class="container text-center text-md-left">
 
     <div class="row mt-3">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <h6 class="text-uppercase font-weight-bold">Alamat</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
         <p>Kumpul Mulyo, Martapura, Kab. OKU Timur Sumatera Selatan</p>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <h6 class="text-uppercase font-weight-bold">Menu Utama</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
         <div class="text-uppercase">
@@ -56,12 +56,27 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <h6 class="text-uppercase font-weight-bold">Contact</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
         <p><i class="fas fa-home mr-3"></i> Kumpul Mulyo, Martapura</p>
         <p><i class="fas fa-envelope mr-3"></i> loremipsum@gmail.com</p>
         <p><i class="fas fa-phone mr-3"></i> +0735400</p>
+      </div>
+
+      <div class="col-md-3 mb-4">
+
+            <h6 class="text-uppercase font-weight-bold">Link Terkait</h6>
+
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
+
+            <p>
+              <a href="http://www.akmi-baturaja.ac.id" target="_blank">
+                <img src="https://www.maypimartapuraokut.sch.id/assets/img/akmi.png" alt="" width="60">
+                <font class="text-white ml-3">AKMI BATURAJA</font>
+              </a>
+            </p>
+
       </div>
 
     </div>
