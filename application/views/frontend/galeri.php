@@ -3,7 +3,6 @@
 		<div class="col-md-8">
 			<h1 class="text-center mb-4">Galeri</h1>
 			
-<<<<<<< HEAD
 			<div class="row mb-4" style="margin-bottom: 50px;">
 				
 				<?php foreach($kategori_galeri as $kategori_galeri) : ?>
@@ -17,21 +16,7 @@
 					</div>
 				</div>
 				<?php endforeach; ?>
-
-=======
-			<div class="row">
-				<?php foreach ($galeri as $galeri) : ?>
-				<div class="col-md-3 mb-3">
-					<div class="card">
-						<div class="zoom-gallery">
-							<a href="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" title="Galeri MA YPI Martapura OKUT SUMSEL">
-							  <img src="<?= base_url('assets/img/galeri/'.$galeri['foto']); ?>" class="card-img-top">
-							</a>
-						</div>
-					</div>
-				</div>
-				<?php endforeach; ?>
->>>>>>> origin/master
+				
 			</div>
 		</div>
 
