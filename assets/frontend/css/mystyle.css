@@ -1,0 +1,168 @@
+a, a:hover {
+	text-decoration: none;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.header-topbar {
+	background-color: #135238;
+}
+
+
+img.gambar-slide {
+	max-height: 700px;
+}
+
+.konten {
+	min-height: 500px;
+}
+
+.nav-link {
+	color: white!important;
+}
+
+.active {
+	color: yellow!important;
+}
+
+.nav-link:hover {
+	color: yellow!important;
+}
+
+.dropdown-menu {
+	background-color: #28a745!important;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: #28a745!important;
+	color: yellow!important;
+}
+
+
+/* warna selang seling di halaman home */
+.bg-abu {
+	background-color: #eaeaea;
+	border-radius: 8px;
+}
+/**/
+
+/* style untuk 3 program unggulan dihome */
+.fa.service {
+    font-size: 100px;
+    color: #28a745;
+}
+/**/
+
+ul.eskul {
+	margin-left: -15px;
+}
+
+ul.eskul li {
+	padding-bottom: 15px;
+	color: #007bff;
+}
+
+.guru {
+	height:250px;
+}
+
+.pengumuman {
+	color: grey;
+	font-weight: 100;
+}
+
+.berita {
+	height: 200px;
+}
+
+/* responsive */
+@media screen and (max-width: 480px){
+	.bagikan {
+		display: none;
+	}
+
+	.guru {
+		height: 100%;
+	}
+
+	.map {
+		width: 340px;
+		margin-top: 20px;
+	}
+
+	.sosmed {
+		padding-bottom: 20px;
+	}
+
+	#nama {
+		text-align: center;
+	}
+
+@media screen and (max-width: 768px){
+	img.gambar-slide {
+		height: 250px;
+	}
+
+	.map {
+		width: 100px;
+		margin-top: 20px;
+	}
+
+	.berita {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.map {
+		width: 300px;
+		margin-top: 20px;
+	}
+}
+/**/
+
+
+
+
+
+
+/* style lightbox untuk foto dari https://dimsemenov.com/plugins/magnific-popup/ */
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+/**/
