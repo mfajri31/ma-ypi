@@ -169,6 +169,10 @@
           <a href="<?= base_url('administrator/pengumuman'); ?>"><i class="fa fa-info-circle"></i> <span>Manajemen Pengumuman</span></a>
       </li>
 
+      <li class="<?= active_menu('ppdb'); ?>">
+          <a href="<?= base_url('administrator/ppdb'); ?>"><i class="fa fa-users"></i> <span>Manajemen PPDB</span></a>
+      </li>
+
       <li class="treeview <?= active_menu('foto_galeri') || active_menu('kategori_galeri'); ?>">
         <a href="">
           <i class="fa fa-users"></i> <span>Manajemen Galeri</span>
